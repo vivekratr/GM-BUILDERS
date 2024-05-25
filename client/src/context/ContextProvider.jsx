@@ -21,7 +21,7 @@ const getEthereumContract = () => {
   console.log("Contract", socoinContract);
   return socoinContract;
 };
-export const SocoinProvider = ({ children }) => {
+export const BlogProvider = ({ children }) => {
 return (
     <Context.Provider
       value={{ }}
