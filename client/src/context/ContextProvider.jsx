@@ -21,11 +21,15 @@ const getEthereumContract = () => {
   console.log("Contract", socoinContract);
   return socoinContract;
 };
+// eslint-disable-next-line react/prop-types
 export const BlogProvider = ({ children }) => {
+    const childRef = React.useRef(null);
+    const [datas,setDatas] = React.useState('')
+
   const handleProfileDataReturned = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("dapp receives:", receivedData);
-    setData(receivedData.data[0].assetData);
+    setDatas(receivedData.data[0].assetData);
     // alert(JSON.stringify(receivedData));
     childRef.current.closeSocialConnectPopup();
   };
