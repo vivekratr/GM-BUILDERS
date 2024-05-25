@@ -94,7 +94,21 @@ export const BlogProvider = ({ children }) => {
     }
   };
   return (
-    <Context.Provider value={{ handleProfileDataReturned }}>
+    <Context.Provider value={{ handleProfileDataReturned,
+        handleGetAllAccounts,
+        handleGetConnectedAccount,
+        handleMessageSignature,
+        handleVerifyMessageSignature,
+        handleGetBalance,
+        handleSendTransaction,
+        handleGetBlockNumber,
+        handleGetTransactionCount,
+        handleReadFromContract,
+        handleWriteToContract,
+        handleErrorMessage,
+        renderData,
+        getEthereumContract
+     }}>
       {children}
     </Context.Provider>
   );
