@@ -1,0 +1,38 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Gmbuilders
+    network: arbitrum-sepolia
+    source:
+      address: "0xc69CDb82B2A6D69A8e71f9FFf75EcD69ad080DDc"
+      abi: Gmbuilders
+      startBlock: 47834165
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - BlogCreated
+        - BlogTipped
+        - NewsTipped
+        - UserUpdated
+        - newsCreated
+      abis:
+        - name: Gmbuilders
+          file: ./abis/Gmbuilders.json
+      eventHandlers:
+        - event: BlogCreated(indexed uint256,string,indexed address,string[])
+          handler: handleBlogCreated
+        - event: BlogTipped(indexed uint256,indexed address,uint256)
+          handler: handleBlogTipped
+        - event: NewsTipped(indexed uint256,indexed address,uint256)
+          handler: handleNewsTipped
+        - event: UserUpdated(indexed address,string,string,string[],string)
+          handler: handleUserUpdated
+        - event: newsCreated(indexed uint256,string,string[])
+          handler: handlenewsCreated
+      file: ./src/gmbuilders.ts

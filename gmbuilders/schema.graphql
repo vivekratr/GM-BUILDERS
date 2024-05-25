@@ -1,0 +1,52 @@
+type BlogCreated @entity(immutable: true) {
+  id: Bytes!
+  blogId: BigInt! # uint256
+  blogLink: String! # string
+  owner: Bytes! # address
+  categories: [String!]! # string[]
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type BlogTipped @entity(immutable: true) {
+  id: Bytes!
+  blogId: BigInt! # uint256
+  tipper: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NewsTipped @entity(immutable: true) {
+  id: Bytes!
+  blogId: BigInt! # uint256
+  tipper: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UserUpdated @entity(immutable: true) {
+  id: Bytes!
+  userAddress: Bytes! # address
+  name: String! # string
+  username: String! # string
+  interest: [String!]! # string[]
+  profileUrl: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type newsCreated @entity(immutable: true) {
+  id: Bytes!
+  blogId: BigInt! # uint256
+  blogLink: String! # string
+  categories: [String!]! # string[]
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
