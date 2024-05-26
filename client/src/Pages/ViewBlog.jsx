@@ -154,7 +154,7 @@ const ViewBlog = () => {
           </div>
 
           <div>
-          <div className="w-[61.5rem] relative text-[1.375rem] lowercase font-times-new-roman text-white text-justify inline-block">
+          <div className="w-full mb-[64px] relative text-[1.375rem] lowercase font-times-new-roman text-white text-justify inline-block">
 <p className="m-0">Lorem ipsum dolor sit amet consectetur. Lorem turpis id sem eu enim sapien pharetra. At posuere elementum sed integer viverra malesuada purus. Malesuada sagittis enim dui id tellus imperdiet in risus non. Amet sed elementum amet amet pellentesque tortor sagittis. Sed vel viverra curabitur nec tellus urna congue posuere. Facilisis tristique sollicitudin ut urna. Ultrices dolor platea maecenas nibh justo non amet semper.</p>
 <p className="m-0">&nbsp;</p>
 <p className="m-0">&nbsp;</p>
