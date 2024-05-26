@@ -27,6 +27,9 @@ const Home = () => {
       <div className="bg-black pb-[233px]">
         <Home_comp5 />
       </div>
+      <div className="bg-black pb-[233px]">
+        <Home_comp5 />
+      </div>
     </>
   );
 };
