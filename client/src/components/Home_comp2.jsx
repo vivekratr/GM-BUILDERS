@@ -5,7 +5,7 @@ const Home_comp2 = () => {
     <div className="bg-black">
       <div
         style={{ gridTemplateRows: `260px 360px 314px auto` }}
-        className="grid grid-cols-12 pt-[63px] gap-[25px] w-[97%] mx-auto p-1 "
+        className="grid grid-cols-12 pt-[63px] gap-[55px] px-[43px] w-[100%] mx-auto p-1 "
       >
         {/* 1st row */}
         <div className=" col-span-6 ">
