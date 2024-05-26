@@ -305,7 +305,7 @@ const BlogSection = () => {
               />
               <div className="w-[14.875rem] relative text-[1rem] capitalize font-inria-serif text-left inline-block text-white">
                 <span>Emmett Chen-Ran ·</span>
-                <span className="text-dimgray">3 days ago</span>
+                <span className="text-[#747474]">3 days ago</span>
               </div>
               <img
                 className="w-9 h-9 object-value"
