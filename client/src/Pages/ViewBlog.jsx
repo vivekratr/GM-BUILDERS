@@ -189,12 +189,13 @@ const ViewBlog = () => {
                 facilisi platea dictumst ut.
               </p>
             </div>
-
           </div>
-            <div className="w-[80%] relative text-[1.375rem] lowercase font-times-new-roman text-justify inline-block text-white">
-<span>{`refences - `}</span>
-<span className="text-[#6978FF]">rhoncus. Ipsum dictum etiam lacus nullam at porttitor e</span>
-</div>
+          <div className="w-[80%] relative text-[1.375rem] lowercase font-times-new-roman text-justify inline-block text-white">
+            <span>{`refences - `}</span>
+            <span className="text-[#6978FF]">
+              rhoncus. Ipsum dictum etiam lacus nullam at porttitor e
+            </span>
+          </div>
         </div>
       </div>
     </div>
