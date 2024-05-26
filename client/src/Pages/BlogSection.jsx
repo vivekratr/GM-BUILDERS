@@ -44,8 +44,7 @@ const BlogSection = () => {
       <div className="flex pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1040px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
         <button
           className={`focus:outline-none transition-all duration-200  ${
-            activeButton === "Recommended For You"
-              ?  "" : " "
+            activeButton === "Recommended For You" ? "" : " "
           }`}
           onClick={() => handleButtonClick("Recommended For You")}
         >
@@ -73,7 +72,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none transition-all duration-200 ${
-            activeButton === "Crypto" ?  "" : " "
+            activeButton === "Crypto" ? "" : " "
           }`}
           onClick={() => handleButtonClick("Crypto")}
         >
@@ -86,7 +85,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none transition-all duration-200 ${
-            activeButton === "Web 3.0" ?  "" : " "
+            activeButton === "Web 3.0" ? "" : " "
           }`}
           onClick={() => handleButtonClick("Web 3.0")}
         >
@@ -99,7 +98,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none transition-all duration-200 ${
-            activeButton === "Technology" ?  "" : " "
+            activeButton === "Technology" ? "" : " "
           }`}
           onClick={() => handleButtonClick("Technology")}
         >
@@ -112,7 +111,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none transition-all duration-200 ${
-            activeButton === "Gaming" ?  "" : " "
+            activeButton === "Gaming" ? "" : " "
           }`}
           onClick={() => handleButtonClick("Gaming")}
         >
@@ -125,7 +124,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none transition-all duration-200 ${
-            activeButton === "Funding" ?  "" : " "
+            activeButton === "Funding" ? "" : " "
           }`}
           onClick={() => handleButtonClick("Funding")}
         >
