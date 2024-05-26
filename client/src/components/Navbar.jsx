@@ -94,10 +94,9 @@ const Navbar = () => {
       </div>
       {/* showing button */}
       
-        <div onClick={handleVisibleButtonClick} className="w-full relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-gray">
-        <button className='text-white' onClick={handleVisibleButtonClick}>Connect wallet</button>
-<img className="flex items-center justify-center w-[1.188rem] h-[1.875rem] object-cover" alt="" src="3fbe3265b2c891e12d5f8e1096cebfa7 1.png" />
-<div className="flex items-center justify-center lowercase font-light">{`Connect wallet `}</div>
+        <div onClick={handleVisibleButtonClick} className="w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]">
+<img className="flex items-center justify-center w-[1.188rem] h-[1.875rem] object-cover" alt="" src={isConnected?`${``}`:`https://i.imgur.com/85UVZQv.png`} />
+<div className="flex items-center justify-center uppercase font-light">{isConnected?`Connected!`:`Connect`}</div>
 </div>
      
 
