@@ -7,18 +7,23 @@ import BlogSection from "./Pages/BlogSection";
 import ViewBlog from "./Pages/ViewBlog";
 
 function App() {
-  return  <BrowserRouter>
-  <div>
-    <BlogProvider>
-      <Routes>
-        <Route path="/" element={<Home /*state = {state}*/ />} />
-        <Route path="/blog" element={<BlogSection /*state = {state}*/ />} />
-        <Route path="/blogview" element={<ViewBlog /*state = {state}*/ />} />
-        </Routes>
+  return (
+    <BrowserRouter>
+      <div>
+        <BlogProvider>
+          <Routes>
+            <Route path="/" element={<Home /*state = {state}*/ />} />
+            <Route path="/blog" element={<BlogSection /*state = {state}*/ />} />
+            <Route
+              path="/blogview"
+              element={<ViewBlog /*state = {state}*/ />}
+            />
+          </Routes>
           {/* {<RegisterPage/>}  */}
         </BlogProvider>
       </div>
     </BrowserRouter>
+  );
 }
 
 export default App;
