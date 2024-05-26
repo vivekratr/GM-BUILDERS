@@ -140,12 +140,9 @@ const BlogSection = () => {
 
       {/* cards */}
       <div
-      style={{ gridTemplateRows: `530px  auto` }}
-      className="grid grid-cols-12 bg-black pb-[150px]   gap-x-[25px] gap-y-[33px] w-[1200px] mx-auto p-1 "
-    >
-        
-
-      </div>
+        style={{ gridTemplateRows: `530px  auto` }}
+        className="grid grid-cols-12 bg-black pb-[150px]   gap-x-[25px] gap-y-[33px] w-[1200px] mx-auto p-1 "
+      ></div>
       {/* cards */}
     </div>
   );
