@@ -113,7 +113,7 @@ const ViewBlog = () => {
             </b>
 
             <div className="flex mb-[37px] justify-between">
-              <div className="flex items-center justify-center">
+              <div className="flex gap-4 items-center justify-center">
                 <img
                   className=" w-11 h-11 object-cover"
                   src="https://i.imgur.com/ooOn9TK.png"
@@ -124,7 +124,7 @@ const ViewBlog = () => {
                   <div className="min-w-[8.813rem] relative text-[1.375rem] capitalize font-medium font-inter text-white text-left inline-block">
                     Aditya kumar
                   </div>
-                  <div className="flex items-center justify-between ">
+                  <div className="flex gap-6 items-center justify-between ">
                     <div className="w-[5.563rem] relative text-[1rem] lowercase font-inter text-[#888888] text-left inline-block">
                       2 mins read
                     </div>
