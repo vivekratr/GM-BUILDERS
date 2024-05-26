@@ -116,7 +116,10 @@ const ViewBlog = () => {
 
                     <div className="flex flex-col items-start justify-center w-max">
                     <div className="min-w-[8.813rem] relative text-[1.375rem] capitalize font-medium font-inter text-white text-left inline-block">Aditya kumar</div>
-div.flex
+<div className="flex">
+<div className="w-[5.563rem] relative text-[1rem] lowercase font-inter text-gray text-left inline-block">2 mins read</div>
+<div className="w-[6.313rem] relative text-[1rem] capitalize font-inter text-gray text-left inline-block">23 May 2024</div>
+</div>
                     </div>
 
                 </div>
