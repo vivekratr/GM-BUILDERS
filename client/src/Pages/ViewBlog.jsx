@@ -25,6 +25,16 @@ const ViewBlog = () => {
 
   const hiddenButtonWrapperRef = React.useRef(null);
 
+  const handleVisibleButtonClick = () => {
+    if (hiddenButtonWrapperRef.current) {
+      const hiddenButton =
+        hiddenButtonWrapperRef.current.querySelector("button");
+      if (hiddenButton) {
+        hiddenButton.click();
+      }
+    }
+  };
+
   return <div>
     {/* navbar */}
     <div className="flex justify-between items-center bg-black p-[18px]">
