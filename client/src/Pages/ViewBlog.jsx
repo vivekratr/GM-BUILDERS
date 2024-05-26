@@ -189,6 +189,8 @@ const ViewBlog = () => {
                 facilisi platea dictumst ut.
               </p>
             </div>
+
+            
           </div>
         </div>
       </div>
