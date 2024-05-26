@@ -20,11 +20,15 @@ const Navbar = () => {
         childRef,
       } = useContext(Context);
 
+      const hiddenButtonWrapperRef = React.useRef(null);
 
       // Function to handle the click on the visible button
       const handleVisibleButtonClick = () => {
-        if (childRef.current) {
-          childRef.current.click();
+        if (hiddenButtonWrapperRef.current) {
+          const hiddenButton = hiddenButtonWrapperRef.current.querySelector('button');
+          if (hiddenButton) {
+            hiddenButton.click();
+          }
         }
       };
   return (
@@ -80,6 +84,7 @@ const Navbar = () => {
             flipBackgroundColor: '#12AE83',
             flipTextColor: '#FFFFFF'
           }}
+          ref={childRef}
         />
       </div>
       {/* showing button */}
