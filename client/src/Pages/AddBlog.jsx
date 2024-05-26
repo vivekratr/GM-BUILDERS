@@ -103,6 +103,15 @@ const AddBlog = () => {
           </div>
         </div>
       </div>
+      {/* navbar */}
+
+        {/* main */}
+        <div className="w-[80%] pt-7 pl-[77px] pb-10 pr-[49px] mx-auto flex  items-start justify-start relative rounded-[20px] bg-gray-300 box-border h-[33.25rem] overflow-hidden text-left text-[1.375rem] text-gray-100 font-inria-serif border-[1px] border-solid border-gray-200">
+
+
+        </div>
+        {/* main */}
+
     </div>
   );
 };
