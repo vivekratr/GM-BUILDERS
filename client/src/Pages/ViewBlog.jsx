@@ -136,12 +136,13 @@ const ViewBlog = () => {
               </div>
 
               <div>
-                <img className="w-[34px] h-[34px] object-cover " src="https://i.imgur.com/wQnCdVP.png" alt="" />
+                <img
+                  className="w-[34px] h-[34px] object-cover "
+                  src="https://i.imgur.com/wQnCdVP.png"
+                  alt=""
+                />
               </div>
-              
             </div>
-
-            
           </div>
         </div>
       </div>
