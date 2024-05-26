@@ -332,6 +332,45 @@ const BlogSection = () => {
             </div>
           </div>
         </div>
+
+        {/* 2nd column */}
+        <div className="relative col-span-6 p-1">
+          <div className="flex flex-col ">
+            <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center justify-center gap-1">
+
+              <img
+                className="w-7 h-7 object-value"
+                src="https://i.imgur.com/2rUV7WM.png"
+                alt=""
+              />
+              <div className="w-[14.875rem] relative text-[1rem] capitalize font-inria-serif text-left inline-block text-white">
+                <span>Emmett Chen-Ran ·</span>
+                <span className="text-[#747474]">3 days ago</span>
+              </div>
+                </div>
+              <img
+                className="w-9 h-9 object-value"
+                src="https://i.imgur.com/gBgyZBw.png"
+                alt=""
+              />
+              <img
+                className="w-7 h-[25px] object-value"
+                src="https://i.imgur.com/L1lxGis.png"
+                alt=""
+              />
+            </div>
+
+            <div className="flex pt-10 gap-8">
+            <div className="w-[354px] relative text-[1rem] capitalize font-inria-serif text-[#A8A8A8] text-left inline-block">
+<p className="m-0">My name is Benoit. I have been a software engineer for the past eight and a half years. I stayed at my previous (and first) company for seven and a half years, then I joined a new one in early 2022.</p>
+<p className="m-0">This article comes from a recent self-reflection on the things I wish I had started doing earlier in my career and the things I wish I had done differently.</p>
+</div>
+
+<img className=" relative max-w-full overflow-hidden h-[268px] " alt="" src="https://i.imgur.com/0vAeccP.png" />
+            </div>
+          </div>
+        </div>
       </div>
       {/* cards */}
     </div>
