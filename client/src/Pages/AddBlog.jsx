@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef,useEffect } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 
@@ -16,7 +16,6 @@ const AddBlog = () => {
     handleReadFromContract,
     handleWriteToContract,
     handleErrorMessage,
-    // renderData,
     profileData,
     childRef,
   } = useContext(Context);
@@ -62,16 +61,16 @@ const AddBlog = () => {
 
   return (
     <div className="bg-black pb-12">
-      {/* navbar */}
+      {/* Navbar */}
       <div className="flex justify-between items-center bg-black p-[18px]">
-        <div className=" w-[128px] h-[103px] object-cover ">
-          <img src="https://i.imgur.com/VSXWSCv.png" alt="" />
+        <div className="w-[128px] h-[103px] object-cover">
+          <img src="https://i.imgur.com/VSXWSCv.png" alt="Logo" />
         </div>
 
-        {/* wallet */}
+        {/* Wallet */}
         <div>
           <div className="w-[186px]">
-            {/* hidden button */}
+            {/* Hidden button */}
             <div ref={hiddenButtonWrapperRef} style={{ display: "none" }}>
               <PluralitySocialConnect
                 options={{ apps: "facebook,twitter" }}
@@ -90,7 +89,6 @@ const AddBlog = () => {
                 onReadFromContract={handleReadFromContract}
                 onWriteToContract={handleWriteToContract}
                 onErrorMessage={handleErrorMessage}
-                // all customization params are optional
                 customization={{
                   height: "30px",
                   width: "156px",
@@ -102,37 +100,28 @@ const AddBlog = () => {
                 ref={childRef}
               />
             </div>
-            {/* showing button */}
-
+            {/* Showing button */}
             <div
               onClick={handleVisibleButtonClick}
               className="rounded-lg cursor-pointer w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]"
             >
               <img
-                className={`flex items-center justify-center  object-cover ${
-                  isConnected
-                    ? `rounded-full w-[2rem]`
-                    : `w-[1.188rem] h-[1.875rem]`
-                }`}
-                alt=""
-                src={
-                  isConnected
-                    ? `${profileData.profileUrl}`
-                    : `https://i.imgur.com/85UVZQv.png`
-                }
+                className={`flex items-center justify-center object-cover ${isConnected ? 'rounded-full w-[2rem]' : 'w-[1.188rem] h-[1.875rem]'}`}
+                alt="Profile"
+                src={isConnected ? profileData.profileUrl : 'https://i.imgur.com/85UVZQv.png'}
               />
               <div className="flex items-center justify-center uppercase font-light">
-                {isConnected ? `${profileData.name}` : `Connect`}
+                {isConnected ? profileData.name : 'Connect'}
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* navbar */}
+      {/* Navbar */}
 
-      {/* main */}
-      <div className="w-[80%] pt-7 pl-[77px] pb-10 pr-[49px] mx-auto flex flex-col  items-start justify-start relative rounded-[20px] bg-[#111] box-border  overflow-hidden text-left text-[1.375rem] text-[#7a7a7a] font-inria-serif border-[1px] border-solid border-[#282828]">
-        {/* ai */}
+      {/* Main */}
+      <div className="w-[80%] pt-7 pl-[77px] pb-10 pr-[49px] mx-auto flex flex-col items-start justify-start relative rounded-[20px] bg-[#111] box-border overflow-hidden text-left text-[1.375rem] text-[#7a7a7a] font-inria-serif border-[1px] border-solid border-[#282828]">
+        {/* AI */}
         <div className="w-full relative flex items-center justify-end">
           <div className="w-[121px] relative rounded-[5px] box-border h-[2.813rem] overflow-hidden text-center text-[1rem] text-white font-inria-serif border-[1px] border-solid border-[#545454]">
             <div className="flex items-center justify-center w-full h-full capitalize">
@@ -144,23 +133,23 @@ const AddBlog = () => {
           <input
             type="text"
             placeholder="Add title"
-            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[2.188rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[2.188rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left"
           />
         </div>
 
         <div className="flex gap-20 w-full">
           <img
-            src={"https://i.imgur.com/Pp7qZ4p.png"}
+            src="https://i.imgur.com/Pp7qZ4p.png"
             alt="Upload"
             className="cursor-pointer w-[300px] object-contain"
             onClick={handleImageClick}
           />
           <img
             src={selectedImage || ""}
-            alt="Upload"
-            className={`cursor-pointer w-[300px] object-cover ${
-              selectedImage ? "" : "hidden"
-            }`}
+            alt="Selected"
+            className={`cursor-pointer w-[300px] object-cover ${selectedImage ? "" : "hidden"}`}
             onClick={handleImageClick}
           />
           <input
@@ -172,19 +161,23 @@ const AddBlog = () => {
           />
         </div>
 
-        <div className="py-9 ">
+        <div className="py-9">
           <input
             type="text"
-            placeholder={`Start Writing`}
-            className="w-[35.063rem]  h-[160px] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
+            placeholder="Start Writing"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            className="w-[35.063rem] h-[160px] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left"
           />
         </div>
 
-        <div className="py-9 ">
+        <div className="py-9">
           <input
             type="text"
-            placeholder={`Tags (*separate by comma)`}
-            className="w-[25.063rem] px-5 h-[100px] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif rounded-[5px] bg-[#2B2B2B] text-white placeholder:text-[#b0b0b0] p-1 text-left "
+            placeholder="Tags (*separate by comma)"
+            value={tags}
+            onChange={(e) => setTags(e.target.value)}
+            className="w-[25.063rem] px-5 h-[100px] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif rounded-[5px] bg-[#2B2B2B] text-white placeholder:text-[#b0b0b0] p-1 text-left"
           />
         </div>
 
@@ -196,7 +189,7 @@ const AddBlog = () => {
           </div>
         </div>
       </div>
-      {/* main */}
+      {/* Main */}
     </div>
   );
 };
