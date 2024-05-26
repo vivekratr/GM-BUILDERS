@@ -1,4 +1,4 @@
-import React, { useState, useContext,useRef } from "react";
+import React, { useState, useContext, useRef } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 
@@ -142,25 +142,27 @@ const AddBlog = () => {
         </div>
 
         <div className="flex gap-20 w-full">
-        <img
-        src={'https://i.imgur.com/Pp7qZ4p.png'}
-        alt="Upload"
-        className="cursor-pointer w-[300px] object-contain"
-        onClick={handleImageClick}
-      />
-      <img
-        src={selectedImage || ''}
-        alt="Upload"
-        className={`cursor-pointer w-[300px] object-cover ${selectedImage? '':'hidden'}`}
-        onClick={handleImageClick}
-      />
-      <input
-        type="file"
-        ref={fileInputRef}
-        className="hidden"
-        accept="image/*"
-        onChange={handleFileChange}
-      />
+          <img
+            src={"https://i.imgur.com/Pp7qZ4p.png"}
+            alt="Upload"
+            className="cursor-pointer w-[300px] object-contain"
+            onClick={handleImageClick}
+          />
+          <img
+            src={selectedImage || ""}
+            alt="Upload"
+            className={`cursor-pointer w-[300px] object-cover ${
+              selectedImage ? "" : "hidden"
+            }`}
+            onClick={handleImageClick}
+          />
+          <input
+            type="file"
+            ref={fileInputRef}
+            className="hidden"
+            accept="image/*"
+            onChange={handleFileChange}
+          />
         </div>
       </div>
       {/* main */}
