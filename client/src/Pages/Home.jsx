@@ -17,7 +17,7 @@ const Home = () => {
         <Home_comp2 />
       </div>
       <div>
-        <Home_comp3/>
+        <Home_comp3 />
       </div>
     </>
   );
