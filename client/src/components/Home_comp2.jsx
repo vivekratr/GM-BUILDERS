@@ -15,7 +15,7 @@ const Home_comp2 = () => {
           </b>
         </div>
         <div className="col-span-6 relative">
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/QIH7Ngd.png">
+          <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl="https://i.imgur.com/QIH7Ngd.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize font-medium">
@@ -43,7 +43,7 @@ const Home_comp2 = () => {
 
         {/* 1st col */}
         <div className="col-span-6 relative">
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/p1CFttI.png">
+          <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl="https://i.imgur.com/p1CFttI.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize font-medium">
@@ -69,7 +69,7 @@ const Home_comp2 = () => {
         {/* 2nd col */}
 
         <div className="col-span-4 relative">
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/0vAeccP.png">
+          <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl="https://i.imgur.com/0vAeccP.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize font-medium">
@@ -96,7 +96,7 @@ const Home_comp2 = () => {
         {/* 3rd row */}
 
         <div className="col-span-2 relative">
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/B8HPy6z.png">
+          <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl="https://i.imgur.com/B8HPy6z.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize ">
@@ -124,7 +124,7 @@ const Home_comp2 = () => {
         {/* 1st column */}
         <div className="relative col-span-3">
           {" "}
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/LUBoYjI.png">
+          <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl="https://i.imgur.com/LUBoYjI.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize ">
@@ -148,7 +148,7 @@ const Home_comp2 = () => {
         </div>
         <div className="relative col-span-3">
           {" "}
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/cmKslBj.png">
+          <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl="https://i.imgur.com/cmKslBj.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize ">
@@ -172,7 +172,7 @@ const Home_comp2 = () => {
         </div>
         <div className="relative col-span-6">
           {" "}
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/EsEpHvK.png">
+          <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl="https://i.imgur.com/EsEpHvK.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize ">
