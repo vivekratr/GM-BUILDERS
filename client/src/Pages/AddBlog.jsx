@@ -151,7 +151,7 @@ const AddBlog = () => {
       <img
         src={selectedImage || ''}
         alt="Upload"
-        className={`cursor-pointer w-[400px] object-cover`}
+        className={`cursor-pointer w-[300px] object-cover ${selectedImage? '':'hidden'}`}
         onClick={handleImageClick}
       />
       <input
