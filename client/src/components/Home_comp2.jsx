@@ -45,7 +45,7 @@ const Home_comp2 = () => {
         <div className="col-span-6 relative">
           <BackgroundImageDiv imageUrl="https://i.imgur.com/p1CFttI.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
-              <div className="w-[80px] relative rounded-[47px] bg-gray box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize font-medium">
                   Article
                 </div>
@@ -71,7 +71,7 @@ const Home_comp2 = () => {
         <div className="col-span-4 relative">
         <BackgroundImageDiv imageUrl="https://i.imgur.com/p1CFttI.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
-              <div className="w-[80px] relative rounded-[47px] bg-gray box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize font-medium">
                   Article
                 </div>
@@ -99,7 +99,7 @@ const Home_comp2 = () => {
         <BackgroundImageDiv imageUrl="https://i.imgur.com/p1CFttI.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
-                <div className="flex items-center justify-center capitalize font-medium">
+                <div className="flex items-center justify-center capitalize ">
                   Article
                 </div>
               </div>
