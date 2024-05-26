@@ -4,7 +4,7 @@ const Home_comp2 = () => {
   return <>
   <div>
 
-  </div>;
+  </div>
   </>
 };
 
