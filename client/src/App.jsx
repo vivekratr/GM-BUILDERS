@@ -4,6 +4,7 @@ import "./App.css";
 import { BlogProvider } from "./context/ContextProvider";
 import Home from "./Pages/Home";
 import BlogSection from "./Pages/BlogSection";
+import ViewBlog from "./Pages/ViewBlog";
 
 function App() {
   return  <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home /*state = {state}*/ />} />
         <Route path="/blog" element={<BlogSection /*state = {state}*/ />} />
+        <Route path="/blogview" element={<ViewBlog /*state = {state}*/ />} />
         </Routes>
           {/* {<RegisterPage/>}  */}
         </BlogProvider>
