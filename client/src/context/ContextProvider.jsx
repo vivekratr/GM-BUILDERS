@@ -23,37 +23,37 @@ const getEthereumContract = () => {
 };
 // eslint-disable-next-line react/prop-types
 export const BlogProvider = ({ children }) => {
-    const childRef = React.useRef(null);
-    const [datas,setDatas] = React.useState('')
-    const [profileData, setProfileData] = useState(null)
+  const childRef = React.useRef(null);
+  const [datas, setDatas] = React.useState("");
+  const [profileData, setProfileData] = useState(null);
 
-    const handleProfileDataReturned = (data) => {
-      try {
-        const receivedData = data.data; // Access the data array correctly
-        console.log("dapp receives:", receivedData);
-    
-        if (receivedData && receivedData.length > 0) {
-          // Ensure there is at least one element in the array
-          const firstProfileData = receivedData[0]['profileData'];
-    
-          if (firstProfileData) {
-            const _profileData = JSON.parse(firstProfileData); // Parse the profileData string
-            setDatas(receivedData[0]); // Update the state with the first item in the data array
-            setProfileData(_profileData); // Update the state with the parsed profileData
-          } else {
-            console.error('Profile data is undefined');
-          }
+  const handleProfileDataReturned = (data) => {
+    try {
+      const receivedData = data.data; // Access the data array correctly
+      console.log("dapp receives:", receivedData);
+
+      if (receivedData && receivedData.length > 0) {
+        // Ensure there is at least one element in the array
+        const firstProfileData = receivedData[0]["profileData"];
+
+        if (firstProfileData) {
+          const _profileData = JSON.parse(firstProfileData); // Parse the profileData string
+          setDatas(receivedData[0]); // Update the state with the first item in the data array
+          setProfileData(_profileData); // Update the state with the parsed profileData
         } else {
-          console.error('Received data is empty or undefined');
+          console.error("Profile data is undefined");
         }
-      } catch (error) {
-        console.error('Error processing profile data:', error);
+      } else {
+        console.error("Received data is empty or undefined");
       }
-    
-      if (childRef.current) {
-        childRef.current.closeSocialConnectPopup(); // Ensure the childRef is defined before accessing
-      }
-    };
+    } catch (error) {
+      console.error("Error processing profile data:", error);
+    }
+
+    if (childRef.current) {
+      childRef.current.closeSocialConnectPopup(); // Ensure the childRef is defined before accessing
+    }
+  };
   // Web3 function handles
   const handleGetAllAccounts = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
@@ -119,7 +119,9 @@ export const BlogProvider = ({ children }) => {
     }
   };
   return (
-    <Context.Provider value={{ handleProfileDataReturned,
+    <Context.Provider
+      value={{
+        handleProfileDataReturned,
         handleGetAllAccounts,
         handleGetConnectedAccount,
         handleMessageSignature,
@@ -136,7 +138,8 @@ export const BlogProvider = ({ children }) => {
         childRef,
         datas,
         profileData,
-     }}>
+      }}
+    >
       {children}
     </Context.Provider>
   );
