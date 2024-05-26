@@ -3,6 +3,38 @@ import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 
 const AddBlog = () => {
+    const {
+        handleProfileDataReturned,
+        handleGetAllAccounts,
+        handleGetConnectedAccount,
+        handleMessageSignature,
+        handleVerifyMessageSignature,
+        handleGetBalance,
+        handleSendTransaction,
+        handleGetBlockNumber,
+        handleGetTransactionCount,
+        handleReadFromContract,
+        handleWriteToContract,
+        handleErrorMessage,
+        // renderData,
+        profileData,
+        childRef,
+      } = useContext(Context);
+    
+      const [isConnected, setIsConnected] = useState(false);
+    
+      const hiddenButtonWrapperRef = React.useRef(null);
+    
+      const handleVisibleButtonClick = () => {
+        if (hiddenButtonWrapperRef.current) {
+          const hiddenButton =
+            hiddenButtonWrapperRef.current.querySelector("button");
+          if (hiddenButton) {
+            hiddenButton.click();
+          }
+        }
+      };
+    
   return (
     <div>
         {/* navbar */}
