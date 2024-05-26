@@ -41,7 +41,7 @@ const BlogSection = () => {
       {/* search bar */}
 
       {/* Toggle Buttons */}
-      <div className="flex pb-12 border-b-[0.5px] border-solid border-white transition-all duration-150 w-[1040px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
+      <div className="flex pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1040px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
       <button
         className={`focus:outline-none transition-all duration-200  ${activeButton === "Recommended For You" ? "border-b-2 border-white" : ""}`}
         onClick={() => handleButtonClick("Recommended For You")}
@@ -53,7 +53,7 @@ const BlogSection = () => {
         onClick={() => handleButtonClick("Trending")}
       >
         Trending
-        <div className={` relative box-border top-12 transition-all mx-auto duration-200 h-[0.031rem] border-t-[0.5px] border-solid border-white border-b-2 ${activeButton === "Trending" ? " w-full border-white" : "w-0 "}`} />
+        <div className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${activeButton === "Trending" ? " w-full border-white" : "w-0 "}`} />
       </button>
       <button
         className={`focus:outline-none ${activeButton === "Crypto" ? "border-b-2 border-white" : ""}`}
@@ -89,7 +89,9 @@ const BlogSection = () => {
       {/* Toggle Buttons */}
 
       {/* cards */}
-      
+      <div>
+        sadasdad
+      </div>
       {/* cards */}
     </div>
   );
