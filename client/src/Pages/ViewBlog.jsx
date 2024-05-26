@@ -146,7 +146,7 @@ const ViewBlog = () => {
           </div>
 
           <div>
-            <img src="" alt="" />
+            <img className="w-full object-cover" src="https://i.imgur.com/p1CFttI.png" alt="" />
           </div>
         </div>
       </div>
