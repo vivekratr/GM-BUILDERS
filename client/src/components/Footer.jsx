@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" flex justify-center items-start ">
+    <div className=" flex flex-col justify-center bg-black items-center ">
       <img
         src="https://i.imgur.com/ARpUAx4.png"
         alt=""
@@ -12,7 +12,7 @@ const Footer = () => {
       <img
         src="https://i.imgur.com/lxaS5XJ.png"
         alt=""
-        className="w-[74px] h-[99px] object-cover"
+        className="w-[74px] h-[99px] pb-11 object-cover"
       />
       <div className="w-[19.313rem] relative text-[1.125rem] capitalize font-semibold font-inter text-left inline-block text-white">
         <span className="text-[#7d7d7d]">Built by</span>
