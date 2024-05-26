@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import "./css/BlogSection.css";
 
 const BlogSection = () => {
-    const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState(null);
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
@@ -42,58 +42,79 @@ const BlogSection = () => {
 
       {/* Toggle Buttons */}
       <div className="flex pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1040px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
-      <button
-        className={`focus:outline-none transition-all duration-200  ${activeButton === "Recommended For You" ? "border-b-2 border-white" : ""}`}
-        onClick={() => handleButtonClick("Recommended For You")}
-      >
-        Recommended For You
-        <div className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${activeButton === "Trending" ? " w-full border-white" : "w-0 "}`} />
-
-      </button>
-      <button
-        className={`focus:outline-none transition-all relative duration-200  ${activeButton === "Trending" ? "" : " "}`}
-        onClick={() => handleButtonClick("Trending")}
-      >
-        Trending
-        <div className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${activeButton === "Trending" ? " w-full border-white" : "w-0 "}`} />
-      </button>
-      <button
-        className={`focus:outline-none ${activeButton === "Crypto" ? "border-b-2 border-white" : ""}`}
-        onClick={() => handleButtonClick("Crypto")}
-      >
-        Crypto
-      </button>
-      <button
-        className={`focus:outline-none ${activeButton === "Web 3.0" ? "border-b-2 border-white" : ""}`}
-        onClick={() => handleButtonClick("Web 3.0")}
-      >
-        Web 3.0
-      </button>
-      <button
-        className={`focus:outline-none ${activeButton === "Technology" ? "border-b-2 border-white" : ""}`}
-        onClick={() => handleButtonClick("Technology")}
-      >
-        Technology
-      </button>
-      <button
-        className={`focus:outline-none ${activeButton === "Gaming" ? "border-b-2 border-white" : ""}`}
-        onClick={() => handleButtonClick("Gaming")}
-      >
-        Gaming
-      </button>
-      <button
-        className={`focus:outline-none ${activeButton === "Funding" ? "border-b-2 border-white" : ""}`}
-        onClick={() => handleButtonClick("Funding")}
-      >
-        Funding
-      </button>
-    </div>
+        <button
+          className={`focus:outline-none transition-all duration-200  ${
+            activeButton === "Recommended For You"
+              ? "border-b-2 border-white"
+              : ""
+          }`}
+          onClick={() => handleButtonClick("Recommended For You")}
+        >
+          Recommended For You
+          <div
+            className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
+              activeButton === "Trending" ? " w-full border-white" : "w-0 "
+            }`}
+          />
+        </button>
+        <button
+          className={`focus:outline-none transition-all relative duration-200  ${
+            activeButton === "Trending" ? "" : " "
+          }`}
+          onClick={() => handleButtonClick("Trending")}
+        >
+          Trending
+          <div
+            className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
+              activeButton === "Trending" ? " w-full border-white" : "w-0 "
+            }`}
+          />
+        </button>
+        <button
+          className={`focus:outline-none ${
+            activeButton === "Crypto" ? "border-b-2 border-white" : ""
+          }`}
+          onClick={() => handleButtonClick("Crypto")}
+        >
+          Crypto
+        </button>
+        <button
+          className={`focus:outline-none ${
+            activeButton === "Web 3.0" ? "border-b-2 border-white" : ""
+          }`}
+          onClick={() => handleButtonClick("Web 3.0")}
+        >
+          Web 3.0
+        </button>
+        <button
+          className={`focus:outline-none ${
+            activeButton === "Technology" ? "border-b-2 border-white" : ""
+          }`}
+          onClick={() => handleButtonClick("Technology")}
+        >
+          Technology
+        </button>
+        <button
+          className={`focus:outline-none ${
+            activeButton === "Gaming" ? "border-b-2 border-white" : ""
+          }`}
+          onClick={() => handleButtonClick("Gaming")}
+        >
+          Gaming
+        </button>
+        <button
+          className={`focus:outline-none ${
+            activeButton === "Funding" ? "border-b-2 border-white" : ""
+          }`}
+          onClick={() => handleButtonClick("Funding")}
+        >
+          Funding
+        </button>
+      </div>
       {/* Toggle Buttons */}
 
       {/* cards */}
-      <div>
-        sadasdad
-      </div>
+      <div>sadasdad</div>
       {/* cards */}
     </div>
   );
