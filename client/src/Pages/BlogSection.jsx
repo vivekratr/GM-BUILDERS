@@ -318,6 +318,10 @@ const BlogSection = () => {
                 alt=""
               />
             </div>
+
+            <div className="flex gap-4">
+
+            </div>
           </div>
         </div>
       </div>
