@@ -1,11 +1,7 @@
 // import React from 'react'
 
 const Home_comp5 = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Home_comp5
+export default Home_comp5;
