@@ -8,19 +8,22 @@ const Navbar = () => {
             <img src="https://i.imgur.com/T0Ew5Bq.png" className=' object-cover h-[103px]' alt="" />
         </div>
 
-        <div className='h-full items-end'>
-            <ul className='flex items-center space-x-6'>
+        <div className=''>
+            <ul className='flex items-end min-h-[120px] min-w-[500px] justify-between space-x-6'>
                 <li>
                     <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Home</a>
                 </li>
                 <li>
-                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>About</a>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Article</a>
                 </li>
                 <li>
-                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Services</a>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>News</a>
                 </li>
                 <li>
-                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Contact</a>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Communities</a>
+                </li>
+                <li>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Write</a>
                 </li>
             </ul>
         </div>
