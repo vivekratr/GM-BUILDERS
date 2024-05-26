@@ -168,8 +168,16 @@ const AddBlog = () => {
         <div className="py-9 ">
           <input
             type="text"
-            placeholder="Add title"
-            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[2.188rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
+            placeholder={`Start Writing`}
+            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
+          />
+        </div>
+
+        <div className="py-9 ">
+          <input
+            type="text"
+            placeholder={`Start Writing`}
+            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
           />
         </div>
       </div>
