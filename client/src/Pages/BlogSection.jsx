@@ -34,6 +34,10 @@ const BlogSection = () => {
         </div>
       </div>
       {/* search bar */}
+
+      {/* Toggle Buttons */}
+      
+      {/* Toggle Buttons */}
     </div>
   );
 };
