@@ -21,7 +21,7 @@ const Home = () => {
         <Home_comp3 />
       </div>
       <div>
-        <Home_comp4/>
+        <Home_comp4 />
       </div>
     </>
   );
