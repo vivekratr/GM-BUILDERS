@@ -199,7 +199,7 @@ const ViewBlog = () => {
           </div>
 
           <div
-        style={{ gridTemplateRows: `365px 360px 314px auto` }}
+        style={{ gridTemplateRows: `365px 362px 314px auto` }}
         className="grid grid-cols-12  gap-y-[32px] gap-x-[60px] w-[100%] mx-auto  "
       >
         {/* 1st row */}
