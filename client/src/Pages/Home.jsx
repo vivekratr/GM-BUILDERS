@@ -31,6 +31,7 @@ const Home = () => {
       <div className="bg-black pb-[233px]">
         <Home_comp6 />
       </div>
+      
     </>
   );
 };
