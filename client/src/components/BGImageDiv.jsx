@@ -1,6 +1,6 @@
 import React from "react";
 
-const BackgroundImageDiv = ({ imageUrl, children }) => {
+const BackgroundImageDiv = ({ imageUrl, children,classs }) => {
   const divStyle = {
     backgroundImage: `url(${imageUrl})`,
     backgroundSize: "cover",
@@ -8,10 +8,11 @@ const BackgroundImageDiv = ({ imageUrl, children }) => {
     backgroundPosition: "center",
     width: "100%",
     height: "100%",
+    
   };
 
   return (
-    <div style={divStyle} className="absolute inset-0">
+    <div style={divStyle} className={`absolute inset-0 bg-blend-normal ${classs}`}>
       {children}
     </div>
   );
