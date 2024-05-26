@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
+import BackgroundImageDiv from "../components/BGImageDiv";
 
 const ViewBlog = () => {
   const {
@@ -197,8 +198,123 @@ const ViewBlog = () => {
             </span>
           </div>
 
-          <div className="grid">
-            
+          <div
+        style={{ gridTemplateRows: `365px 360px 314px auto` }}
+        className="grid grid-cols-12  gap-y-[32px] gap-x-[60px] w-[100%] mx-auto  "
+      >
+        {/* 1st row */}
+        <div className="col-span-6 relative">
+          <BackgroundImageDiv
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/QIH7Ngd.png"
+          >
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
+            </div>
+          </BackgroundImageDiv>
+        </div>
+
+        <div className="col-span-6 relative">
+          <BackgroundImageDiv
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/QIH7Ngd.png"
+          >
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
+            </div>
+          </BackgroundImageDiv>
+        </div>
+
+        {/* 2nd row */}
+        <div className="col-span-9 relative">
+          <BackgroundImageDiv
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/yXLzDQ1.png"
+          >
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
+            </div>
+          </BackgroundImageDiv>
+        </div>
+        <div className="col-span-3 relative">
+          <BackgroundImageDiv
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/B8HPy6z.png"
+          >
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
+            </div>
+          </BackgroundImageDiv>
+        </div>
+
           </div>
         </div>
       </div>
