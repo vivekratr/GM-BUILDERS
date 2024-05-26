@@ -180,6 +180,11 @@ const AddBlog = () => {
             className="w-[25.063rem] px-5 h-[100px] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif rounded-[5px] bg-[#2B2B2B] text-white placeholder:text-[#b0b0b0] p-1 text-left "
           />
         </div>
+
+        <div className="flex items-center justify-end w-full">
+            
+
+        </div>
       </div>
       {/* main */}
     </div>
