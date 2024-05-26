@@ -1,6 +1,6 @@
 import React from "react";
 
-const BackgroundImageDiv = ({ imageUrl, children,classs }) => {
+const BackgroundImageDiv = ({ imageUrl, children, classs }) => {
   const divStyle = {
     backgroundImage: `url(${imageUrl})`,
     backgroundSize: "cover",
@@ -8,7 +8,6 @@ const BackgroundImageDiv = ({ imageUrl, children,classs }) => {
     backgroundPosition: "center",
     width: "100%",
     height: "100%",
-    
   };
 
   return (
