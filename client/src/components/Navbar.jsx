@@ -4,6 +4,7 @@ import { Context } from "../context/ContextProvider";
 
 const Navbar = () => {
     const {
+        handleProfileDataReturned,
         handleGetAllAccounts,
         handleGetConnectedAccount,
         handleMessageSignature,
