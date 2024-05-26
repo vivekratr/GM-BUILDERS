@@ -1,5 +1,6 @@
 import React from 'react'
 import PluralitySocialConnect from 'plurality-social-connect';
+import { Context } from "../context/ContextProvider";
 
 const Navbar = () => {
   return (

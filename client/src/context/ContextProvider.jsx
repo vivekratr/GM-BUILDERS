@@ -111,7 +111,8 @@ export const BlogProvider = ({ children }) => {
         handleWriteToContract,
         handleErrorMessage,
         renderData,
-        getEthereumContract
+        getEthereumContract,
+        childRef,
      }}>
       {children}
     </Context.Provider>
