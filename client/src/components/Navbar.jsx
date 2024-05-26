@@ -65,7 +65,7 @@ const Navbar = () => {
             {/* hidden button */}
             <div ref={hiddenButtonWrapperRef} style={{ display: 'none' }}>
         <PluralitySocialConnect
-          options={{ apps: 'twitter' }}
+          options={{ apps: 'facebook,twitter' }}
           onProfileDataReturned={async (d)=>{
           await  handleProfileDataReturned(d);
             setIsConnected(true);
