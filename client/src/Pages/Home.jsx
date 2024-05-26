@@ -12,7 +12,7 @@ const Home = () => {
       <div>
         <Home_comp1 />
       </div>
-      <div className="w-full">
+      <div className="">
         <Home_comp2 />
       </div>
     </>
