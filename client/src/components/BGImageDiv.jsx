@@ -12,7 +12,7 @@ const BackgroundImageDiv = ({ imageUrl, children,classs }) => {
   };
 
   return (
-    <div style={divStyle} className={`absolute inset-0 bg-blend-normal ${classs}`}>
+    <div style={divStyle} className={`absolute inset-0 bg-blend-color ${classs}`}>
       {children}
     </div>
   );
