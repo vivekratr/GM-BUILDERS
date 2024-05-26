@@ -182,7 +182,9 @@ const AddBlog = () => {
         </div>
 
         <div className="flex items-center justify-end w-full">
-            
+        <div className="w-full relative rounded-[5px] bg-white box-border h-[2.813rem] overflow-hidden text-left text-[1.375rem] text-black font-inria-serif border-[1px] border-solid border-white">
+<div className="flex items-center justify-center capitalize">Publish</div>
+</div>
 
         </div>
       </div>
