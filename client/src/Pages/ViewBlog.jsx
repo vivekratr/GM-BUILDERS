@@ -134,6 +134,10 @@ const ViewBlog = () => {
                   </div>
                 </div>
               </div>
+
+              <div>
+                <img src="https://i.imgur.com/wQnCdVP.png" alt="" />
+              </div>
               
             </div>
           </div>
