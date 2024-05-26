@@ -196,7 +196,7 @@ const Home_comp2 = () => {
         </div>
       </div>
 
-      <div className="flex pt-5 items-center justify-center w-full">
+      <div className="flex py-5 items-center justify-center w-full">
         <b className="w-[6.188rem] relative text-[1.25rem] capitalize inline-block font-inria-serif text-white text-left">
           Read More
         </b>
