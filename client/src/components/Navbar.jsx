@@ -17,6 +17,7 @@ const Navbar = () => {
         handleWriteToContract,
         handleErrorMessage,
         renderData,
+        profileData,
         childRef,
       } = useContext(Context);
 
@@ -94,9 +95,9 @@ const Navbar = () => {
       </div>
       {/* showing button */}
       
-        <div onClick={handleVisibleButtonClick} className="w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]">
-<img className="flex items-center justify-center w-[1.188rem] h-[1.875rem] object-cover" alt="" src={isConnected?`${``}`:`https://i.imgur.com/85UVZQv.png`} />
-<div className="flex items-center justify-center uppercase font-light">{isConnected?`Connected!`:`Connect`}</div>
+        <div onClick={handleVisibleButtonClick} className= " cursor-pointer w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]">
+<img className={`flex items-center justify-center  object-cover ${isConnected?`rounded-full w-[2rem]`:`w-[1.188rem] h-[1.875rem]`}`} alt="" src={isConnected?`${profileData.profileUrl}`:`https://i.imgur.com/85UVZQv.png`} />
+<div className="flex items-center justify-center uppercase font-light">{isConnected?`${profileData.name}`:`Connect`}</div>
 </div>
      
 
