@@ -6,7 +6,7 @@ const Home_comp5 = () => {
   return (
     <div className=" bg-black relative px-11 h-[409px] mx-auto w-[90%]">
       <BackgroundImageDiv
-        classs={` flex items-center h-[409px] w-full justify-start p-[30px]`}
+        classs={`border-[1px] border-solid border-[#3b3b3b] flex items-center h-[409px] w-full justify-start p-[30px]`}
         imageUrl={`https://i.imgur.com/RCJuj5h.png`}
       >
         <div className="w-[230px] top-7 p-2 relative box-border flex items-center justify-around h-[3.625rem] overflow-hidden text-left text-[1rem] text-white  font-inter border-[0.5px] border-solid border-white">
