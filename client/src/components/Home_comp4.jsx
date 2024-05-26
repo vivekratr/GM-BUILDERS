@@ -10,14 +10,12 @@ const Home_comp4 = () => {
   >
     {/* 1st column */}
     <div className="relative col-span-4">
-        <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b]'} imageUrl={`https://i.imgur.com/n9yeXKZ.png`}>
-        <div className="flex flex-col justify-start items-start p-[29px]">
         <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
-        <div className="flex">
-            <img className="w-[39px] h-[35px] object-cover " src="https://i.imgur.com/uGTI2Yp.png" alt="" />
-            <div className="w-[9.813rem] relative text-[1.188rem] capitalize font-inter text-[#7C7C7C] text-left inline-block">recommendation</div>
-        </div>
-        </div>
+        <BackgroundImageDiv classs={'border-[1px] border-solid border-[#3b3b3b] px-7 flex items-center justify-start '} imageUrl={`https://i.imgur.com/n9yeXKZ.png`}>
+        <div className="w-[240px] flex items-center justify-center relative bg-gray box-border h-[3.625rem] overflow-hidden text-left text-[1.5rem] text-white font-inter border-[1px] border-solid border-white">
+<div className=" capitalize font-semibold">Get started</div>
+<img className=" w-[1.656rem] h-[0.781rem]" alt="" src="https://i.imgur.com/CI4EIog.png" />
+</div>
         </BackgroundImageDiv>
 
     </div>
