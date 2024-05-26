@@ -24,7 +24,7 @@ const Home = () => {
       <div>
         <Home_comp4 />
       </div>
-      <div className="bg-black">
+      <div className="bg-black pb-[233px]">
         <Home_comp5 />
       </div>
     </>
