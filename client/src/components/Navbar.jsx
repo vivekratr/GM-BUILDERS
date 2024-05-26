@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 
@@ -16,7 +16,7 @@ const Navbar = () => {
     handleReadFromContract,
     handleWriteToContract,
     handleErrorMessage,
-    renderData,
+    // renderData,
     profileData,
     childRef,
   } = useContext(Context);
