@@ -14,7 +14,7 @@ const Footer = () => {
         alt=""
         className="w-[74px] h-[99px] pb-11 object-cover"
       />
-      <div className="w-[19.313rem] relative text-[1.125rem] capitalize font-semibold font-inter text-left inline-block text-white">
+      <div className="w-[19.313rem] pb-[32px] relative text-[1.125rem] capitalize font-semibold font-inter text-left inline-block text-white">
         <span className="text-[#7d7d7d]">Built by</span>
         <span className="text-[#FFD000]">{` `}</span>
         <span className="[text-decoration:underline]">#Builders</span>
