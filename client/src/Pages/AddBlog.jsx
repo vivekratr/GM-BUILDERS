@@ -3,42 +3,42 @@ import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 
 const AddBlog = () => {
-    const {
-        handleProfileDataReturned,
-        handleGetAllAccounts,
-        handleGetConnectedAccount,
-        handleMessageSignature,
-        handleVerifyMessageSignature,
-        handleGetBalance,
-        handleSendTransaction,
-        handleGetBlockNumber,
-        handleGetTransactionCount,
-        handleReadFromContract,
-        handleWriteToContract,
-        handleErrorMessage,
-        // renderData,
-        profileData,
-        childRef,
-      } = useContext(Context);
-    
-      const [isConnected, setIsConnected] = useState(false);
-    
-      const hiddenButtonWrapperRef = React.useRef(null);
-    
-      const handleVisibleButtonClick = () => {
-        if (hiddenButtonWrapperRef.current) {
-          const hiddenButton =
-            hiddenButtonWrapperRef.current.querySelector("button");
-          if (hiddenButton) {
-            hiddenButton.click();
-          }
-        }
-      };
-    
+  const {
+    handleProfileDataReturned,
+    handleGetAllAccounts,
+    handleGetConnectedAccount,
+    handleMessageSignature,
+    handleVerifyMessageSignature,
+    handleGetBalance,
+    handleSendTransaction,
+    handleGetBlockNumber,
+    handleGetTransactionCount,
+    handleReadFromContract,
+    handleWriteToContract,
+    handleErrorMessage,
+    // renderData,
+    profileData,
+    childRef,
+  } = useContext(Context);
+
+  const [isConnected, setIsConnected] = useState(false);
+
+  const hiddenButtonWrapperRef = React.useRef(null);
+
+  const handleVisibleButtonClick = () => {
+    if (hiddenButtonWrapperRef.current) {
+      const hiddenButton =
+        hiddenButtonWrapperRef.current.querySelector("button");
+      if (hiddenButton) {
+        hiddenButton.click();
+      }
+    }
+  };
+
   return (
     <div>
-        {/* navbar */}
-        <div className="flex justify-between items-center bg-black p-[18px]">
+      {/* navbar */}
+      <div className="flex justify-between items-center bg-black p-[18px]">
         <div className=" w-[128px] h-[103px] object-cover ">
           <img src="https://i.imgur.com/VSXWSCv.png" alt="" />
         </div>
@@ -104,7 +104,7 @@ const AddBlog = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AddBlog
+export default AddBlog;
