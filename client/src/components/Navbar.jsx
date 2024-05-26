@@ -11,16 +11,16 @@ const Navbar = () => {
         <div className='h-full items-end'>
             <ul className='flex items-center space-x-6'>
                 <li>
-                    <a href='#' className='text-[#000] text-[1.125rem] font-bold'>Home</a>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Home</a>
                 </li>
                 <li>
-                    <a href='#' className='text-[#000] text-[1.125rem] font-bold'>About</a>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>About</a>
                 </li>
                 <li>
-                    <a href='#' className='text-[#000] text-[1.125rem] font-bold'>Services</a>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Services</a>
                 </li>
                 <li>
-                    <a href='#' className='text-[#000] text-[1.125rem] font-bold'>Contact</a>
+                    <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Contact</a>
                 </li>
             </ul>
         </div>
