@@ -20,12 +20,11 @@ const Navbar = () => {
         childRef,
       } = useContext(Context);
 
-      const hiddenButtonRef = React.useRef(null);
 
       // Function to handle the click on the visible button
       const handleVisibleButtonClick = () => {
-        if (hiddenButtonRef.current) {
-          hiddenButtonRef.current.click();
+        if (childRef.current) {
+          childRef.current.click();
         }
       };
   return (
@@ -74,9 +73,11 @@ const Navbar = () => {
                 // all customization params are optional
                 customization={{ height: '30px', width: '156px', initialBackgroundColor: '#E8A123', initialTextColor: '#FFFFFF', flipBackgroundColor: '#12AE83', flipTextColor: '#FFFFFF'}}
                 ref={childRef}
+                
+        style={{ display: 'none' }}
             />
             {/* showing button */}
-            <div>
+            <div onClick={handleVisibleButtonClick}>
                 <button>Connect wallet</button>
             </div>
 
