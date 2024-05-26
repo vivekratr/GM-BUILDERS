@@ -5,6 +5,7 @@ import Home_comp2 from "../components/Home_comp2";
 import Home_comp3 from "../components/Home_comp3";
 import Home_comp4 from "../components/Home_comp4";
 import Home_comp5 from "../components/Home_comp5";
+import Home_comp6 from "../components/Home_comp6";
 
 const Home = () => {
   return (
@@ -28,7 +29,7 @@ const Home = () => {
         <Home_comp5 />
       </div>
       <div className="bg-black pb-[233px]">
-        <Home_comp5 />
+        <Home_comp6 />
       </div>
     </>
   );
