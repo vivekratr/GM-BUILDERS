@@ -20,7 +20,7 @@ const Navbar = () => {
         childRef,
       } = useContext(Context);
 
-      const hiddenButtonRef = useRef(null);
+      const hiddenButtonRef = React.useRef(null);
 
       // Function to handle the click on the visible button
       const handleVisibleButtonClick = () => {
