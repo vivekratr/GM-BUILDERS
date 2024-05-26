@@ -19,6 +19,15 @@ const Navbar = () => {
         renderData,
         childRef,
       } = useContext(Context);
+
+      const hiddenButtonRef = useRef(null);
+
+      // Function to handle the click on the visible button
+      const handleVisibleButtonClick = () => {
+        if (hiddenButtonRef.current) {
+          hiddenButtonRef.current.click();
+        }
+      };
   return (
     <div className=' bg-black flex items-center justify-between p-[1.125rem] min-h-[120px] w-full overflow-hidden'>
 
@@ -47,6 +56,7 @@ const Navbar = () => {
         </div>
 
         <div className='w-[156px]'>
+            {/* hidden button */}
         <PluralitySocialConnect
                 options={{ apps: 'twitter' }}
                 onProfileDataReturned={handleProfileDataReturned}
@@ -62,9 +72,14 @@ const Navbar = () => {
                 onWriteToContract={handleWriteToContract}
                 onErrorMessage={handleErrorMessage}
                 // all customization params are optional
-                customization={{ height: '200px', width: '156px', initialBackgroundColor: '#E8A123', initialTextColor: '#FFFFFF', flipBackgroundColor: '#12AE83', flipTextColor: '#FFFFFF'}}
+                customization={{ height: '30px', width: '156px', initialBackgroundColor: '#E8A123', initialTextColor: '#FFFFFF', flipBackgroundColor: '#12AE83', flipTextColor: '#FFFFFF'}}
                 ref={childRef}
             />
+            {/* showing button */}
+            <div>
+                <button>Connect wallet</button>
+            </div>
+
         </div>
       
     </div>
