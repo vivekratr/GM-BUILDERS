@@ -13,6 +13,16 @@ const Home_comp2 = () => {
             Trending Articles and news
           </b>
         </div>
+        <div className="col-span-6 relative">
+            <div>
+                <img src="" alt="" />
+            </div>
+            <div>
+                
+            </div>
+
+
+        </div>
       </div>
     </div>
   );
