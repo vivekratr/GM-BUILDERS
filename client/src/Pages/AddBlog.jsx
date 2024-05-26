@@ -36,7 +36,7 @@ const AddBlog = () => {
   };
 
   return (
-    <div>
+    <div className="bg-black pb-12">
       {/* navbar */}
       <div className="flex justify-between items-center bg-black p-[18px]">
         <div className=" w-[128px] h-[103px] object-cover ">
