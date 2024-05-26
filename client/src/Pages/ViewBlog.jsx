@@ -112,11 +112,11 @@ const ViewBlog = () => {
 
         <div className="flex mb-[37px] justify-between">
                 <div className="flex items-center justify-center">
-                    <img src="" alt="" />
+                    <img className=" w-11 h-11 object-cover" src="https://i.imgur.com/ooOn9TK.png" alt="" />
 
                     <div className="flex flex-col items-start justify-center w-max">
                     <div className="min-w-[8.813rem] relative text-[1.375rem] capitalize font-medium font-inter text-white text-left inline-block">Aditya kumar</div>
-<div className="flex">
+<div className="flex items-center justify-between ">
 <div className="w-[5.563rem] relative text-[1rem] lowercase font-inter text-gray text-left inline-block">2 mins read</div>
 <div className="w-[6.313rem] relative text-[1rem] capitalize font-inter text-gray text-left inline-block">23 May 2024</div>
 </div>
