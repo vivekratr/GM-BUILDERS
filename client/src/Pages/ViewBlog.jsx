@@ -190,8 +190,11 @@ const ViewBlog = () => {
               </p>
             </div>
 
-            
           </div>
+            <div className="w-[36.188rem] relative text-[1.375rem] lowercase font-times-new-roman text-justify inline-block text-white">
+<span>{`refences - `}</span>
+<span className="text-mediumslateblue">rhoncus. Ipsum dictum etiam lacus nullam at porttitor e</span>
+</div>
         </div>
       </div>
     </div>
