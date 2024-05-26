@@ -6,6 +6,7 @@ import Home_comp3 from "../components/Home_comp3";
 import Home_comp4 from "../components/Home_comp4";
 import Home_comp5 from "../components/Home_comp5";
 import Home_comp6 from "../components/Home_comp6";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -30,6 +31,9 @@ const Home = () => {
       </div>
       <div className="bg-black pb-[233px]">
         <Home_comp6 />
+      </div>
+      <div>
+        <Footer/>
       </div>
     </>
   );
