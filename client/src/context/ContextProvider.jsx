@@ -29,7 +29,7 @@ export const BlogProvider = ({ children }) => {
   const handleProfileDataReturned = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("dapp receives:", receivedData);
-    setDatas(receivedData.data[0].assetData);
+    setDatas(receivedData.data[0]);
     // alert(JSON.stringify(receivedData));
     childRef.current.closeSocialConnectPopup();
   };

@@ -34,14 +34,14 @@ const Navbar = () => {
         }
       };
   return (
-    <div className=' bg-black flex items-center justify-between p-[1.125rem] min-h-[120px] w-full overflow-hidden'>
+    <div className=' bg-black flex px-11 items-center justify-between p-[1.125rem] min-h-[120px] w-full overflow-hidden'>
 
-        <div className='relative left-5'>
+        <div className='relative left-5 bottom-3'>
             <img src="https://i.imgur.com/T0Ew5Bq.png" className=' object-cover h-[103px]' alt="" />
         </div>
 
         <div className=''>
-            <ul className='flex items-end min-h-[120px] min-w-[500px] justify-between space-x-6'>
+            <ul className='flex items-center outline-none relative top-4 gap-[34px] min-h-[120px] min-w-[500px] justify-between space-x-6'>
                 <li>
                     <a href='#' className='text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block'>Home</a>
                 </li>
@@ -60,7 +60,7 @@ const Navbar = () => {
             </ul>
         </div>
 
-        <div className='w-[156px]'>
+        <div className='w-[186px]'>
             {/* hidden button */}
             <div ref={hiddenButtonWrapperRef} style={{ display: 'none' }}>
         <PluralitySocialConnect
