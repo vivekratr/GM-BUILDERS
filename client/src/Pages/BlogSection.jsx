@@ -41,7 +41,7 @@ const BlogSection = () => {
       {/* search bar */}
 
       {/* Toggle Buttons */}
-      <div className="flex pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1040px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
+      <div className="flex mb-[60px] pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1140px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
         <button
           className={`focus:outline-none transition-all duration-200  ${
             activeButton === "Recommended For You" ? "" : " "
@@ -139,7 +139,13 @@ const BlogSection = () => {
       {/* Toggle Buttons */}
 
       {/* cards */}
-      <div>sadasdad</div>
+      <div
+      style={{ gridTemplateRows: `530px  auto` }}
+      className="grid grid-cols-12 bg-black pb-[150px]   gap-x-[25px] gap-y-[33px] w-[1200px] mx-auto p-1 "
+    >
+        
+
+      </div>
       {/* cards */}
     </div>
   );
