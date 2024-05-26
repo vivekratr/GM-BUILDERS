@@ -37,7 +37,7 @@ const Navbar = () => {
   };
   return (
     <div className=" bg-black flex px-11 items-center justify-between p-[1.125rem] min-h-[120px] w-full overflow-hidden">
-      <div className="relative left-5 bottom-3">
+      <div className="relative left-0 bottom-2">
         <img
           src="https://i.imgur.com/T0Ew5Bq.png"
           className=" object-cover h-[103px]"
@@ -46,7 +46,7 @@ const Navbar = () => {
       </div>
 
       <div className="">
-        <ul className="flex items-center outline-none relative top-4 gap-[34px] min-h-[120px] min-w-[500px] justify-between space-x-6">
+        <ul className="flex items-center outline-none relative top-4 gap-[34px] min-h-[120px] min-w-[400px] justify-between space-x-6">
           <li>
             <a
               href="#"
@@ -126,7 +126,7 @@ const Navbar = () => {
 
         <div
           onClick={handleVisibleButtonClick}
-          className=" cursor-pointer w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]"
+          className="rounded-lg cursor-pointer w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]"
         >
           <img
             className={`flex items-center justify-center  object-cover ${
