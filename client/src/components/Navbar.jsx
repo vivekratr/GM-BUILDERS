@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import PluralitySocialConnect from 'plurality-social-connect';
 import { Context } from "../context/ContextProvider";
 
 const Navbar = () => {
+    const {
+        handleGetAllAccounts,
+        handleGetConnectedAccount,
+        handleMessageSignature,
+        handleVerifyMessageSignature,
+        handleGetBalance,
+        handleSendTransaction,
+        handleGetBlockNumber,
+        handleGetTransactionCount,
+        handleReadFromContract,
+        handleWriteToContract,
+        handleErrorMessage,
+        renderData,
+        childRef,
+      } = useContext(Context);
   return (
     <div className=' bg-black flex items-center justify-between p-[1.125rem] min-h-[120px] w-full overflow-hidden'>
 
@@ -31,7 +46,24 @@ const Navbar = () => {
         </div>
 
         <div>
-
+        <PluralitySocialConnect
+                options={{ apps: 'twitter' }}
+                onProfileDataReturned={handleProfileDataReturned}
+                onGetAllAccounts={handleGetAllAccounts}
+                onGetConnectedAccount={handleGetConnectedAccount}
+                onGetMessageSignature={handleMessageSignature}
+                onVerifyMessageSignature={handleVerifyMessageSignature}
+                onGetBalance={handleGetBalance}
+                onSendTransaction={handleSendTransaction}
+                onGetBlockNumber={handleGetBlockNumber}
+                onGetTransactionCount={handleGetTransactionCount}
+                onReadFromContract={handleReadFromContract}
+                onWriteToContract={handleWriteToContract}
+                onErrorMessage={handleErrorMessage}
+                // all customization params are optional
+                // customization={{ height: '200px', width: '500px', initialBackgroundColor: '#E8A123', initialTextColor: '#FFFFFF', flipBackgroundColor: '#12AE83', flipTextColor: '#FFFFFF'}}
+                ref={childRef}
+            />
         </div>
       
     </div>
