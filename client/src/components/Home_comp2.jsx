@@ -5,7 +5,7 @@ const Home_comp2 = () => {
   return (
     <div className="bg-black">
       <div
-        style={{ gridTemplateRows: `260px 360px 314px auto` }}
+        style={{ gridTemplateRows: `262px 360px 314px auto` }}
         className="grid grid-cols-12 pt-[63px] gap-[55px] px-[43px] w-[100%] mx-auto p-1 "
       >
         {/* 1st row */}
@@ -15,9 +15,10 @@ const Home_comp2 = () => {
           </b>
         </div>
         <div className="col-span-6 relative">
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/QIH7Ngd.png" />
+          <BackgroundImageDiv imageUrl="https://i.imgur.com/QIH7Ngd.png" >
 
-          <div className="flex flex-col gap-4 items-end justify-start p-3">
+
+          <div className="flex flex-col gap-4 items-start justify-end h-full p-3">
             <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
               <div className="flex items-center justify-center capitalize font-medium">
                 Article
@@ -28,7 +29,7 @@ const Home_comp2 = () => {
               Is web 3 future of Internet ?
             </b>
 
-            <div className="w-[30.875rem] relative text-[1rem] capitalize font-inria-serif text-darkgray text-left inline-block">
+            <div className="w-[30.875rem] relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
               Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
               convallis pellentesque blandit facilisis.
             </div>
@@ -37,6 +38,7 @@ const Home_comp2 = () => {
               23 may 2024
             </div>
           </div>
+          </BackgroundImageDiv>
         </div>
       </div>
     </div>
