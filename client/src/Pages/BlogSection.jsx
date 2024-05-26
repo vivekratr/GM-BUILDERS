@@ -36,7 +36,15 @@ const BlogSection = () => {
       {/* search bar */}
 
       {/* Toggle Buttons */}
-      
+      <div className="flex">
+        <ul>Recommended For You</ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+      </div>
       {/* Toggle Buttons */}
     </div>
   );
