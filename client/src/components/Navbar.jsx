@@ -56,30 +56,36 @@ const Navbar = () => {
 
         <div className='w-[156px]'>
             {/* hidden button */}
+            <div ref={hiddenButtonWrapperRef} style={{ display: 'none' }}>
         <PluralitySocialConnect
-                options={{ apps: 'twitter' }}
-                onProfileDataReturned={handleProfileDataReturned}
-                onGetAllAccounts={handleGetAllAccounts}
-                onGetConnectedAccount={handleGetConnectedAccount}
-                onGetMessageSignature={handleMessageSignature}
-                onVerifyMessageSignature={handleVerifyMessageSignature}
-                onGetBalance={handleGetBalance}
-                onSendTransaction={handleSendTransaction}
-                onGetBlockNumber={handleGetBlockNumber}
-                onGetTransactionCount={handleGetTransactionCount}
-                onReadFromContract={handleReadFromContract}
-                onWriteToContract={handleWriteToContract}
-                onErrorMessage={handleErrorMessage}
-                // all customization params are optional
-                customization={{ height: '30px', width: '156px', initialBackgroundColor: '#E8A123', initialTextColor: '#FFFFFF', flipBackgroundColor: '#12AE83', flipTextColor: '#FFFFFF'}}
-                ref={childRef}
-                
-        style={{ display: 'none' }}
-            />
-            {/* showing button */}
-            <div onClick={handleVisibleButtonClick}>
-                <button>Connect wallet</button>
-            </div>
+          options={{ apps: 'twitter' }}
+          onProfileDataReturned={handleProfileDataReturned}
+          onGetAllAccounts={handleGetAllAccounts}
+          onGetConnectedAccount={handleGetConnectedAccount}
+          onGetMessageSignature={handleMessageSignature}
+          onVerifyMessageSignature={handleVerifyMessageSignature}
+          onGetBalance={handleGetBalance}
+          onSendTransaction={handleSendTransaction}
+          onGetBlockNumber={handleGetBlockNumber}
+          onGetTransactionCount={handleGetTransactionCount}
+          onReadFromContract={handleReadFromContract}
+          onWriteToContract={handleWriteToContract}
+          onErrorMessage={handleErrorMessage}
+          // all customization params are optional
+          customization={{
+            height: '30px',
+            width: '156px',
+            initialBackgroundColor: '#E8A123',
+            initialTextColor: '#FFFFFF',
+            flipBackgroundColor: '#12AE83',
+            flipTextColor: '#FFFFFF'
+          }}
+        />
+      </div>
+      {/* showing button */}
+      <div>
+        <button onClick={handleVisibleButtonClick}>Connect wallet</button>
+      </div>
 
         </div>
       
