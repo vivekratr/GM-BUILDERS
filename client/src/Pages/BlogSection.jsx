@@ -38,10 +38,10 @@ const BlogSection = () => {
       {/* Toggle Buttons */}
       <div className="flex">
         <ul>Recommended For You</ul>
-        <ul></ul>
-        <ul></ul>
-        <ul></ul>
-        <ul></ul>
+        <ul>Trending</ul>
+        <ul> Crypto</ul>
+        <ul>Web 3.0</ul>
+        <ul> </ul>
         <ul></ul>
         <ul></ul>
       </div>
