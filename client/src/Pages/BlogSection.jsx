@@ -297,7 +297,7 @@ const BlogSection = () => {
         {/* 1st column */}
         <div className="relative col-span-4 p-1">
           <div className="flex flex-col ">
-            <div className="flex">
+            <div className="flex items-center justify-center gap-3">
               <img
                 className="w-7 h-7 object-value"
                 src="https://i.imgur.com/2rUV7WM.png"
