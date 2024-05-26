@@ -11,6 +11,7 @@ export default {
       fontFamily: {
         inter: "Inter",
         "inria-serif": "'Inria Serif'",
+        "times-new-roman": "'Times New Roman'",
       },
     },
     fontSize: {
