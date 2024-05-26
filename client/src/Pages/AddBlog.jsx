@@ -124,7 +124,7 @@ const AddBlog = () => {
       {/* navbar */}
 
       {/* main */}
-      <div className="w-[80%] pt-7 pl-[77px] pb-10 pr-[49px] mx-auto flex flex-col  items-start justify-start relative rounded-[20px] bg-[#111] box-border h-[33.25rem] overflow-hidden text-left text-[1.375rem] text-[#7a7a7a] font-inria-serif border-[1px] border-solid border-[#282828]">
+      <div className="w-[80%] pt-7 pl-[77px] pb-10 pr-[49px] mx-auto flex flex-col  items-start justify-start relative rounded-[20px] bg-[#111] box-border  overflow-hidden text-left text-[1.375rem] text-[#7a7a7a] font-inria-serif border-[1px] border-solid border-[#282828]">
         {/* ai */}
         <div className="w-full relative flex items-center justify-end">
           <div className="w-[121px] relative rounded-[5px] box-border h-[2.813rem] overflow-hidden text-center text-[1rem] text-white font-inria-serif border-[1px] border-solid border-[#545454]">
@@ -162,6 +162,14 @@ const AddBlog = () => {
             className="hidden"
             accept="image/*"
             onChange={handleFileChange}
+          />
+        </div>
+
+        <div className="py-9 ">
+          <input
+            type="text"
+            placeholder="Add title"
+            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[2.188rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
           />
         </div>
       </div>
