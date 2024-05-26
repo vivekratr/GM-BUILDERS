@@ -153,7 +153,17 @@ const ViewBlog = () => {
             />
           </div>
 
-          <div></div>
+          <div>
+          <div className="w-[61.5rem] relative text-[1.375rem] lowercase font-times-new-roman text-white text-justify inline-block">
+<p className="m-0">Lorem ipsum dolor sit amet consectetur. Lorem turpis id sem eu enim sapien pharetra. At posuere elementum sed integer viverra malesuada purus. Malesuada sagittis enim dui id tellus imperdiet in risus non. Amet sed elementum amet amet pellentesque tortor sagittis. Sed vel viverra curabitur nec tellus urna congue posuere. Facilisis tristique sollicitudin ut urna. Ultrices dolor platea maecenas nibh justo non amet semper.</p>
+<p className="m-0">&nbsp;</p>
+<p className="m-0">&nbsp;</p>
+<p className="m-0">Dolor magna pretium pulvinar nulla facilisis hac id placerat vitae. Augue nunc commodo netus lacus diam velit purus ipsum diam. Lobortis lectus diam sit vel eu nulla eget in. A luctus iaculis dolor viverra dignissim ultrices sed. Vitae mi metus mi amet urna arcu morbi libero. Leo vitae ullamcorper nunc orci viverra molestie vitae. Mattis ac ultricies molestie libero. Sapien dapibus vitae tempor eleifend est blandit nisi. Eu et tincidunt facilisis tellus nibh id sed egestas vitae. Quisque pretium sed libero sem molestie. Mi morbi sed semper tellus. Vitae sit nec ac sollicitudin. Diam tellus est ac sed senectus.</p>
+<p className="m-0">&nbsp;</p>
+<p className="m-0">&nbsp;</p>
+<p className="m-0">Rhoncus dignissim pretium mauris varius enim nisl posuere. Tristique tempus enim euismod enim nulla nisl. Proin sed imperdiet morbi hendrerit ultrices pharetra id nunc duis. At donec amet id enim. Dictumst sit dolor odio duis in rhoncus. Ipsum dictum etiam lacus nullam at porttitor eu. Non nisl eu facilisi platea dictumst ut.</p>
+</div>
+          </div>
         </div>
       </div>
     </div>
