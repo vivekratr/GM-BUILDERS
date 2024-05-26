@@ -15,29 +15,27 @@ const Home_comp2 = () => {
           </b>
         </div>
         <div className="col-span-6 relative">
-          <BackgroundImageDiv imageUrl="https://i.imgur.com/QIH7Ngd.png" >
+          <BackgroundImageDiv imageUrl="https://i.imgur.com/QIH7Ngd.png">
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
 
+              <b className="w-[19.938rem] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
 
-          <div className="flex flex-col  items-start justify-end h-full p-3">
-            <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
-              <div className="flex items-center justify-center capitalize font-medium">
-                Article
+              <div className="w-[30.875rem] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
               </div>
             </div>
-
-            <b className="w-[19.938rem] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
-              Is web 3 future of Internet ?
-            </b>
-
-            <div className="w-[30.875rem] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
-              Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
-              convallis pellentesque blandit facilisis.
-            </div>
-
-            <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
-              23 may 2024
-            </div>
-          </div>
           </BackgroundImageDiv>
         </div>
 
