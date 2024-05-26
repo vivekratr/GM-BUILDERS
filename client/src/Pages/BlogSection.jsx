@@ -72,7 +72,7 @@ const BlogSection = () => {
           />
         </button>
         <button
-          className={`focus:outline-none ${
+          className={`focus:outline-none transition-all duration-200 ${
             activeButton === "Crypto" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Crypto")}
@@ -85,7 +85,7 @@ const BlogSection = () => {
           />
         </button>
         <button
-          className={`focus:outline-none ${
+          className={`focus:outline-none transition-all duration-200 ${
             activeButton === "Web 3.0" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Web 3.0")}
@@ -98,7 +98,7 @@ const BlogSection = () => {
           />
         </button>
         <button
-          className={`focus:outline-none ${
+          className={`focus:outline-none transition-all duration-200 ${
             activeButton === "Technology" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Technology")}
@@ -111,7 +111,7 @@ const BlogSection = () => {
           />
         </button>
         <button
-          className={`focus:outline-none ${
+          className={`focus:outline-none transition-all duration-200 ${
             activeButton === "Gaming" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Gaming")}
@@ -124,7 +124,7 @@ const BlogSection = () => {
           />
         </button>
         <button
-          className={`focus:outline-none ${
+          className={`focus:outline-none transition-all duration-200 ${
             activeButton === "Funding" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Funding")}
