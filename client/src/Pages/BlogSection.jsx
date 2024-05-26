@@ -45,8 +45,7 @@ const BlogSection = () => {
         <button
           className={`focus:outline-none transition-all duration-200  ${
             activeButton === "Recommended For You"
-              ? "border-b-2 border-white"
-              : ""
+              ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Recommended For You")}
         >
