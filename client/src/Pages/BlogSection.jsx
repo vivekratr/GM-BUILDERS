@@ -100,7 +100,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none ${
-            activeButton === "Technology" ? "border-b-2 border-white" : ""
+            activeButton === "Technology" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Technology")}
         >
@@ -113,7 +113,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none ${
-            activeButton === "Gaming" ? "border-b-2 border-white" : ""
+            activeButton === "Gaming" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Gaming")}
         >
@@ -126,7 +126,7 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none ${
-            activeButton === "Funding" ? "border-b-2 border-white" : ""
+            activeButton === "Funding" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Funding")}
         >
