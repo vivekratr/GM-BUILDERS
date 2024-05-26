@@ -21,6 +21,8 @@ const BlogSection = () => {
 </div>
 
         </div>
+        {/* search bar */}
+
     </div>
   )
 }
