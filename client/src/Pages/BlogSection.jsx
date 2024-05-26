@@ -89,7 +89,7 @@ const BlogSection = () => {
           Web 3.0
           <div
             className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
-              activeButton === "Recommended For You" ? " w-full border-white" : "w-0 "
+              activeButton === "Web 3.0" ? " w-full border-white" : "w-0 "
             }`}
           />
         </button>
@@ -102,7 +102,7 @@ const BlogSection = () => {
           Technology
           <div
             className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
-              activeButton === "Recommended For You" ? " w-full border-white" : "w-0 "
+              activeButton === "Technology" ? " w-full border-white" : "w-0 "
             }`}
           />
         </button>
@@ -113,6 +113,11 @@ const BlogSection = () => {
           onClick={() => handleButtonClick("Gaming")}
         >
           Gaming
+          <div
+            className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
+              activeButton === "Gaming" ? " w-full border-white" : "w-0 "
+            }`}
+          />
         </button>
         <button
           className={`focus:outline-none ${
@@ -121,6 +126,11 @@ const BlogSection = () => {
           onClick={() => handleButtonClick("Funding")}
         >
           Funding
+          <div
+            className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
+              activeButton === "Funding" ? " w-full border-white" : "w-0 "
+            }`}
+          />
         </button>
       </div>
       {/* Toggle Buttons */}
