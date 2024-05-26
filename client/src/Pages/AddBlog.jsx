@@ -115,7 +115,7 @@ const AddBlog = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="pb-9">
           <input
             type="text"
             placeholder="Add title"
