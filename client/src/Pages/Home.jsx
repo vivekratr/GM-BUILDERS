@@ -33,7 +33,7 @@ const Home = () => {
         <Home_comp6 />
       </div>
       <div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
