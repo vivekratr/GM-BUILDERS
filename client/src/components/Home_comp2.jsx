@@ -2,10 +2,10 @@ import React from "react";
 
 const Home_comp2 = () => {
   return (
-    <>
+    <div className="bg-black">
       <div
         style={{ gridTemplateRows: `260px 360px 314px auto` }}
-        className="grid grid-cols-12 gap-[25px] w-[97%] bg-black mx-auto p-1 "
+        className="grid grid-cols-12 gap-[25px] w-[97%] mx-auto p-1 "
       >
         {/* 1st row */}
         <div className=" col-span-6 ">
@@ -14,7 +14,7 @@ const Home_comp2 = () => {
           </b>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
