@@ -40,6 +40,7 @@ const Home_comp2 = () => {
         </div>
 
         {/* 2nd row */}
+        
         {/* 1st col */}
         <div className="col-span-6"></div>
         {/* 2nd col */}
