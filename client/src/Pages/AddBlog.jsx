@@ -56,6 +56,7 @@ const AddBlog = () => {
 
   useEffect(() => {
     const tagsList = tags.split(",").map(tag => tag.trim()).filter(tag => tag);
+     console.log(tagsList)
     setTagsArray(tagsList);
   }, [tags]);
 
@@ -181,7 +182,7 @@ const AddBlog = () => {
           />
         </div>
 
-        <div className="flex items-center justify-end w-full">
+        <div className="flex cursor-pointer items-center justify-end w-full">
           <div className="w-[166px] relative rounded-[5px] bg-white box-border h-[2.813rem] overflow-hidden text-left text-[1.375rem] text-black font-inria-serif border-[1px] border-solid border-white">
             <div className="flex items-center h-full justify-center capitalize">
               Publish
@@ -190,6 +191,7 @@ const AddBlog = () => {
         </div>
       </div>
       {/* Main */}
+      <div>{tagsArray}</div>
     </div>
   );
 };
