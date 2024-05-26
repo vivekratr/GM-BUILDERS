@@ -46,7 +46,7 @@ const Navbar = () => {
             </ul>
         </div>
 
-        <div>
+        <div className='w-[156px]'>
         <PluralitySocialConnect
                 options={{ apps: 'twitter' }}
                 onProfileDataReturned={handleProfileDataReturned}
@@ -62,7 +62,7 @@ const Navbar = () => {
                 onWriteToContract={handleWriteToContract}
                 onErrorMessage={handleErrorMessage}
                 // all customization params are optional
-                // customization={{ height: '200px', width: '500px', initialBackgroundColor: '#E8A123', initialTextColor: '#FFFFFF', flipBackgroundColor: '#12AE83', flipTextColor: '#FFFFFF'}}
+                customization={{ height: '200px', width: '156px', initialBackgroundColor: '#E8A123', initialTextColor: '#FFFFFF', flipBackgroundColor: '#12AE83', flipTextColor: '#FFFFFF'}}
                 ref={childRef}
             />
         </div>
