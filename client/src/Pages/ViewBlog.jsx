@@ -43,6 +43,7 @@ const ViewBlog = () => {
           <img src="https://i.imgur.com/VSXWSCv.png" alt="" />
         </div>
 
+{/* wallet */}
         <div>
           <div className="w-[186px]">
             {/* hidden button */}
@@ -102,6 +103,17 @@ const ViewBlog = () => {
           </div>
         </div>
       </div>
+
+      {/* blog content */}
+      <div className=" w-[1050px] mx-auto bg-black ">
+
+        <div className="flex flex-col ">
+
+        </div>
+        
+      </div>
+
+
     </div>
   );
 };
