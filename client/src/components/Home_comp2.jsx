@@ -202,8 +202,8 @@ const Home_comp2 = () => {
         </b>
         <img
           className=" relative max-w-full overflow-hidden w-[1.75rem] h-[1.75rem] object-contain"
-          alt=""
-          src="clarity:arrow-line.png"
+          alt="arrow"
+          src="https://i.imgur.com/CI4EIog.png"
         />
       </div>
     </div>
