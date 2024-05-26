@@ -5,7 +5,7 @@ import "./css/BlogSection.css";
 
 const BlogSection = () => {
   return (
-    <div>
+    <div className="bg-black">
       <div>
         <Navbar />
       </div>
@@ -36,14 +36,14 @@ const BlogSection = () => {
       {/* search bar */}
 
       {/* Toggle Buttons */}
-      <div className="flex">
+      <div className="flex text-[1.125rem] capitalize font-medium font-inter text-white text-left  gap-x-12 items-center justify-evenly">
         <ul>Recommended For You</ul>
         <ul>Trending</ul>
         <ul> Crypto</ul>
         <ul>Web 3.0</ul>
-        <ul> </ul>
-        <ul></ul>
-        <ul></ul>
+        <ul> Technology</ul>
+        <ul>Gaming</ul>
+        <ul> Funding</ul>
       </div>
       {/* Toggle Buttons */}
     </div>
