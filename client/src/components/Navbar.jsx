@@ -1,4 +1,5 @@
 import React from 'react'
+import PluralitySocialConnect from 'plurality-social-connect';
 
 const Navbar = () => {
   return (
