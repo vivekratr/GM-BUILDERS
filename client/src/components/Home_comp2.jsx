@@ -197,8 +197,14 @@ const Home_comp2 = () => {
       </div>
 
       <div className="flex pt-5 items-center justify-center w-full">
-      <b className="w-[6.188rem] relative text-[1.25rem] capitalize inline-block font-inria-serif text-white text-left">Read More</b>
-      <img className=" relative max-w-full overflow-hidden w-[1.75rem] h-[1.75rem] object-contain" alt="" src="clarity:arrow-line.png" />
+        <b className="w-[6.188rem] relative text-[1.25rem] capitalize inline-block font-inria-serif text-white text-left">
+          Read More
+        </b>
+        <img
+          className=" relative max-w-full overflow-hidden w-[1.75rem] h-[1.75rem] object-contain"
+          alt=""
+          src="clarity:arrow-line.png"
+        />
       </div>
     </div>
   );
