@@ -81,7 +81,7 @@ const Home_comp2 = () => {
                 U.S. Credit Unions Adopt Tokenization of Real World Assets
               </b>
 
-              <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-white text-left inline-block">
+              <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#A8A8A8] text-left inline-block">
                 Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
                 convallis pellentesque blandit facilisis.
               </div>
@@ -98,7 +98,7 @@ const Home_comp2 = () => {
         <div className="col-span-2 relative">
         <BackgroundImageDiv imageUrl="https://i.imgur.com/p1CFttI.png">
             <div className="flex flex-col  items-start justify-end h-full p-3">
-              <div className="w-[80px] relative rounded-[47px] bg-gray box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
+              <div className="w-[80px] rounded-[47px] bg-gray box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize font-medium">
                   Article
                 </div>
