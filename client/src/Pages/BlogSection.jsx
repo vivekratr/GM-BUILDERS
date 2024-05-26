@@ -141,7 +141,7 @@ const BlogSection = () => {
 
       {/* cards */}
       <div
-        style={{ gridTemplateRows: `530px  auto` }}
+        style={{ gridTemplateRows: ` 360px 360px 320px  auto` }}
         className="grid grid-cols-12 bg-black pb-[150px]   gap-x-[25px] gap-y-[33px] w-[1200px] mx-auto p-1 "
       >
         {/* 1st row */}
@@ -149,18 +149,28 @@ const BlogSection = () => {
         <div className="relative col-span-7">
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
-            classs={
-              "border-[1px] border-solid border-[#3b3b3b] px-7 flex items-center justify-start "
-            }
-            imageUrl={`https://i.imgur.com/n9yeXKZ.png`}
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/p1CFttI.png"
           >
-            <div className="w-[240px] bottom-12 flex items-center justify-center relative bg-[#FFFFFF7A] box-border h-[3.625rem] overflow-hidden text-left text-[1.5rem] text-white font-inter border-[1px] border-solid border-white">
-              <div className=" capitalize font-semibold">Get started</div>
-              <img
-                className=" w-[1.656rem] h-[0.781rem]"
-                alt=""
-                src="https://i.imgur.com/CI4EIog.png"
-              />
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
             </div>
           </BackgroundImageDiv>
         </div>
@@ -168,18 +178,28 @@ const BlogSection = () => {
         <div className="relative col-span-5">
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
-            classs={
-              "border-[1px] border-solid border-[#3b3b3b] px-7 flex items-center justify-start "
-            }
-            imageUrl={`https://i.imgur.com/n9yeXKZ.png`}
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/0vAeccP.png"
           >
-            <div className="w-[240px] bottom-12 flex items-center justify-center relative bg-[#FFFFFF7A] box-border h-[3.625rem] overflow-hidden text-left text-[1.5rem] text-white font-inter border-[1px] border-solid border-white">
-              <div className=" capitalize font-semibold">Get started</div>
-              <img
-                className=" w-[1.656rem] h-[0.781rem]"
-                alt=""
-                src="https://i.imgur.com/CI4EIog.png"
-              />
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
             </div>
           </BackgroundImageDiv>
         </div>
@@ -188,19 +208,29 @@ const BlogSection = () => {
         {/* 1st column */}
         <div className="relative col-span-4">
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
-          <BackgroundImageDiv
-            classs={
-              "border-[1px] border-solid border-[#3b3b3b] px-7 flex items-center justify-start "
-            }
-            imageUrl={`https://i.imgur.com/n9yeXKZ.png`}
+         <BackgroundImageDiv
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/0vAeccP.png"
           >
-            <div className="w-[240px] bottom-12 flex items-center justify-center relative bg-[#FFFFFF7A] box-border h-[3.625rem] overflow-hidden text-left text-[1.5rem] text-white font-inter border-[1px] border-solid border-white">
-              <div className=" capitalize font-semibold">Get started</div>
-              <img
-                className=" w-[1.656rem] h-[0.781rem]"
-                alt=""
-                src="https://i.imgur.com/CI4EIog.png"
-              />
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
             </div>
           </BackgroundImageDiv>
         </div>
@@ -208,18 +238,28 @@ const BlogSection = () => {
         <div className="relative col-span-4">
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
-            classs={
-              "border-[1px] border-solid border-[#3b3b3b] px-7 flex items-center justify-start "
-            }
-            imageUrl={`https://i.imgur.com/n9yeXKZ.png`}
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/0vAeccP.png"
           >
-            <div className="w-[240px] bottom-12 flex items-center justify-center relative bg-[#FFFFFF7A] box-border h-[3.625rem] overflow-hidden text-left text-[1.5rem] text-white font-inter border-[1px] border-solid border-white">
-              <div className=" capitalize font-semibold">Get started</div>
-              <img
-                className=" w-[1.656rem] h-[0.781rem]"
-                alt=""
-                src="https://i.imgur.com/CI4EIog.png"
-              />
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
             </div>
           </BackgroundImageDiv>
         </div>
@@ -227,20 +267,48 @@ const BlogSection = () => {
         <div className="relative col-span-4">
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
-            classs={
-              "border-[1px] border-solid border-[#3b3b3b] px-7 flex items-center justify-start "
-            }
-            imageUrl={`https://i.imgur.com/n9yeXKZ.png`}
+            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            imageUrl="https://i.imgur.com/B8HPy6z.png"
           >
-            <div className="w-[240px] bottom-12 flex items-center justify-center relative bg-[#FFFFFF7A] box-border h-[3.625rem] overflow-hidden text-left text-[1.5rem] text-white font-inter border-[1px] border-solid border-white">
-              <div className=" capitalize font-semibold">Get started</div>
-              <img
-                className=" w-[1.656rem] h-[0.781rem]"
-                alt=""
-                src="https://i.imgur.com/CI4EIog.png"
-              />
+            <div className="flex flex-col  items-start justify-end h-full p-3">
+              <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFFA3] box-border h-[1.438rem] text-left text-[1rem] text-black font-inter border-[0.5px] border-solid border-white">
+                <div className="flex items-center justify-center capitalize font-medium">
+                  Article
+                </div>
+              </div>
+
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+                Is web 3 future of Internet ?
+              </b>
+
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
+                convallis pellentesque blandit facilisis.
+              </div>
+
+              <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
+                23 may 2024
+              </div>
             </div>
           </BackgroundImageDiv>
+        </div>
+
+        {/* 3rd row */}
+        {/* 1st column */}
+        <div className="relative col-span-4 p-1">
+            <div className="flex flex-col ">
+
+            <div className="flex">
+                <img className="w-7 h-7 object-value" src="https://i.imgur.com/2rUV7WM.png" alt="" />
+                <div className="w-[14.875rem] relative text-[1rem] capitalize font-inria-serif text-left inline-block text-white">
+<span>Emmett Chen-Ran ·</span>
+<span className="text-dimgray">3 days ago</span>
+</div>
+                <img className="w-9 h-9 object-value" src="https://i.imgur.com/gBgyZBw.png" alt="" />
+                <img className="w-7 h-[25px] object-value" src="https://i.imgur.com/L1lxGis.png" alt="" />
+            </div>
+
+            </div>
         </div>
       </div>
       {/* cards */}

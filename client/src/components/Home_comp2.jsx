@@ -27,11 +27,11 @@ const Home_comp2 = () => {
                 </div>
               </div>
 
-              <b className="w-[19.938rem] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
+              <b className="w-[90%] relative pt-3 text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
                 Is web 3 future of Internet ?
               </b>
 
-              <div className="w-[30.875rem] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
+              <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
                 Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
                 convallis pellentesque blandit facilisis.
               </div>
