@@ -53,7 +53,9 @@ const BlogSection = () => {
           Recommended For You
           <div
             className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
-              activeButton === "Recommended For You" ? " w-full border-white" : "w-0 "
+              activeButton === "Recommended For You"
+                ? " w-full border-white"
+                : "w-0 "
             }`}
           />
         </button>
@@ -72,17 +74,20 @@ const BlogSection = () => {
         </button>
         <button
           className={`focus:outline-none ${
-            activeButton === "Crypto" ? "border-b-2 border-white" : ""
+            activeButton === "Crypto" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Crypto")}
         >
           Crypto
-        <div className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${activeButton === "Crypto" ? " w-full border-white" : "w-0 "}`} />
-
+          <div
+            className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
+              activeButton === "Crypto" ? " w-full border-white" : "w-0 "
+            }`}
+          />
         </button>
         <button
           className={`focus:outline-none ${
-            activeButton === "Web 3.0" ? "border-b-2 border-white" : ""
+            activeButton === "Web 3.0" ?  "" : " "
           }`}
           onClick={() => handleButtonClick("Web 3.0")}
         >
