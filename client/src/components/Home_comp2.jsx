@@ -9,7 +9,9 @@ const Home_comp2 = () => {
       >
         {/* 1st row */}
         <div className=" col-span-6 ">
-        <b className="w-[43.688rem] relative text-[5.125rem] capitalize inline-block font-inria-serif text-white text-left">Trending Articles and news</b>
+          <b className="w-[43.688rem] relative text-[5.125rem] capitalize inline-block font-inria-serif text-white text-left">
+            Trending Articles and news
+          </b>
         </div>
       </div>
     </>
