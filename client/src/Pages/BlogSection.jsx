@@ -324,6 +324,8 @@ const BlogSection = () => {
 <p className="m-0">My name is Benoit. I have been a software engineer for the past eight and a half years. I stayed at my previous (and first) company for seven and a half years, then I joined a new one in early 2022.</p>
 <p className="m-0">This article comes from a recent self-reflection on the things I wish I had started doing earlier in my career and the things I wish I had done differently.</p>
 </div>
+
+
             </div>
           </div>
         </div>
