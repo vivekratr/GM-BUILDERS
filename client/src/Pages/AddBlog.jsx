@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useState, useContext, useRef,useEffect } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 
@@ -22,21 +22,23 @@ const AddBlog = () => {
   } = useContext(Context);
 
   const [isConnected, setIsConnected] = useState(false);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [tags, setTags] = useState("");
+  const [tagsArray, setTagsArray] = useState([]);
 
   const hiddenButtonWrapperRef = React.useRef(null);
+  const fileInputRef = useRef(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleVisibleButtonClick = () => {
     if (hiddenButtonWrapperRef.current) {
-      const hiddenButton =
-        hiddenButtonWrapperRef.current.querySelector("button");
+      const hiddenButton = hiddenButtonWrapperRef.current.querySelector("button");
       if (hiddenButton) {
         hiddenButton.click();
       }
     }
   };
-
-  const fileInputRef = useRef(null);
-  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = () => {
     fileInputRef.current.click();
@@ -52,6 +54,11 @@ const AddBlog = () => {
       reader.readAsDataURL(file);
     }
   };
+
+  useEffect(() => {
+    const tagsList = tags.split(",").map(tag => tag.trim()).filter(tag => tag);
+    setTagsArray(tagsList);
+  }, [tags]);
 
   return (
     <div className="bg-black pb-12">
