@@ -208,7 +208,7 @@ const BlogSection = () => {
         {/* 1st column */}
         <div className="relative col-span-4">
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
-         <BackgroundImageDiv
+          <BackgroundImageDiv
             classs={"border-[1px] border-solid border-[#3b3b3b]"}
             imageUrl="https://i.imgur.com/0vAeccP.png"
           >
@@ -296,19 +296,29 @@ const BlogSection = () => {
         {/* 3rd row */}
         {/* 1st column */}
         <div className="relative col-span-4 p-1">
-            <div className="flex flex-col ">
-
+          <div className="flex flex-col ">
             <div className="flex">
-                <img className="w-7 h-7 object-value" src="https://i.imgur.com/2rUV7WM.png" alt="" />
-                <div className="w-[14.875rem] relative text-[1rem] capitalize font-inria-serif text-left inline-block text-white">
-<span>Emmett Chen-Ran ·</span>
-<span className="text-dimgray">3 days ago</span>
-</div>
-                <img className="w-9 h-9 object-value" src="https://i.imgur.com/gBgyZBw.png" alt="" />
-                <img className="w-7 h-[25px] object-value" src="https://i.imgur.com/L1lxGis.png" alt="" />
+              <img
+                className="w-7 h-7 object-value"
+                src="https://i.imgur.com/2rUV7WM.png"
+                alt=""
+              />
+              <div className="w-[14.875rem] relative text-[1rem] capitalize font-inria-serif text-left inline-block text-white">
+                <span>Emmett Chen-Ran ·</span>
+                <span className="text-dimgray">3 days ago</span>
+              </div>
+              <img
+                className="w-9 h-9 object-value"
+                src="https://i.imgur.com/gBgyZBw.png"
+                alt=""
+              />
+              <img
+                className="w-7 h-[25px] object-value"
+                src="https://i.imgur.com/L1lxGis.png"
+                alt=""
+              />
             </div>
-
-            </div>
+          </div>
         </div>
       </div>
       {/* cards */}
