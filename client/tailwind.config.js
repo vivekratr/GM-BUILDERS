@@ -9,6 +9,7 @@ export default {
       spacing: {},
       fontFamily: {
         inter: "Inter",
+        "inria-serif": "'Inria Serif'",
       },
     },
     fontSize: {
