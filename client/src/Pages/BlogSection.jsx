@@ -145,7 +145,7 @@ const BlogSection = () => {
         className="grid grid-cols-12 bg-black pb-[150px]   gap-x-[25px] gap-y-[33px] w-[1200px] mx-auto p-1 "
       >
         {/* 1st column */}
-        <div className="relative col-span-4">
+        <div className="relative col-span-7">
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
             classs={
