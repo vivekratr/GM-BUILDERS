@@ -118,6 +118,10 @@ const Home_comp2 = () => {
             </div>
           </BackgroundImageDiv>
         </div>
+
+        {/* 3rd row */}
+
+        
       </div>
     </div>
   );
