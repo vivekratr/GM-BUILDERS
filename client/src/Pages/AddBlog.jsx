@@ -113,15 +113,15 @@ const AddBlog = () => {
             <div className="flex items-center justify-center w-full h-full capitalize">
               AI assistant
             </div>
-
-
-
           </div>
         </div>
-            <div>
-            <input type="text" placeholder="Add title" className="w-[15.063rem] relative text-[2.188rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "/>
-
-            </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Add title"
+            className="w-[15.063rem] relative text-[2.188rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
+          />
+        </div>
       </div>
       {/* main */}
     </div>
