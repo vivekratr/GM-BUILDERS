@@ -177,7 +177,7 @@ const AddBlog = () => {
           <input
             type="text"
             placeholder={`Start Writing`}
-            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
+            className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[1.5rem] capitalize inline-block font-inria-serif rounded-[5px] bg-[#2B2B2B] text-white placeholder:text-[#b0b0b0] p-1 text-left "
           />
         </div>
       </div>
