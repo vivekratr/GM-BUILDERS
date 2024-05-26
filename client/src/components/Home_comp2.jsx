@@ -8,7 +8,9 @@ const Home_comp2 = () => {
         className="grid grid-cols-12 gap-[25px] w-[97%] mx-auto p-1 "
       >
         {/* 1st row */}
-        <div></div>
+        <div className=" col-span-6 ">
+        <b className="w-[43.688rem] relative text-[5.125rem] capitalize inline-block font-inria-serif text-white text-left">Trending Articles and news</b>
+        </div>
       </div>
     </>
   );
