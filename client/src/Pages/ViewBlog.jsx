@@ -112,7 +112,7 @@ const ViewBlog = () => {
               U.S. Credit Unions Adopt Tokenization of Real World Assets
             </b>
 
-            <div className="flex mb-[37px] justify-between">
+            <div className="flex w-full mb-[37px] justify-between">
               <div className="flex gap-4 items-center justify-center">
                 <img
                   className=" w-11 h-11 object-cover"
@@ -136,10 +136,12 @@ const ViewBlog = () => {
               </div>
 
               <div>
-                <img src="https://i.imgur.com/wQnCdVP.png" alt="" />
+                <img className="w-[34px] h-[34px] object-cover " src="https://i.imgur.com/wQnCdVP.png" alt="" />
               </div>
               
             </div>
+
+            
           </div>
         </div>
       </div>
