@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext,useRef } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 
@@ -32,6 +32,24 @@ const AddBlog = () => {
       if (hiddenButton) {
         hiddenButton.click();
       }
+    }
+  };
+
+  const fileInputRef = useRef(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setSelectedImage(e.target.result);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -121,6 +139,10 @@ const AddBlog = () => {
             placeholder="Add title"
             className="w-[35.063rem] placeholder:bg-transparent bg-transparent relative text-[2.188rem] capitalize inline-block font-inria-serif text-white placeholder:text-[#7A7A7A] p-1 text-left "
           />
+        </div>
+
+        <div>
+            <img src="https://i.imgur.com/Pp7qZ4p.png" alt="" />
         </div>
       </div>
       {/* main */}
