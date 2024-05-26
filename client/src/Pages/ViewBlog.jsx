@@ -105,6 +105,8 @@ const ViewBlog = () => {
       </div>
 
       {/* blog content */}
+      <div className="bg-black">
+
       <div className=" w-[1050px] mx-auto bg-black ">
 
         <div className="flex flex-col justify-center items-start ">
@@ -117,8 +119,8 @@ const ViewBlog = () => {
                     <div className="flex flex-col items-start justify-center w-max">
                     <div className="min-w-[8.813rem] relative text-[1.375rem] capitalize font-medium font-inter text-white text-left inline-block">Aditya kumar</div>
 <div className="flex items-center justify-between ">
-<div className="w-[5.563rem] relative text-[1rem] lowercase font-inter text-gray text-left inline-block">2 mins read</div>
-<div className="w-[6.313rem] relative text-[1rem] capitalize font-inter text-gray text-left inline-block">23 May 2024</div>
+<div className="w-[5.563rem] relative text-[1rem] lowercase font-inter text-[#888888] text-left inline-block">2 mins read</div>
+<div className="w-[6.313rem] relative text-[1rem] capitalize font-inter text-[#888888] text-left inline-block">23 May 2024</div>
 </div>
                     </div>
 
@@ -127,6 +129,9 @@ const ViewBlog = () => {
         </div>
         
       </div>
+
+      </div>
+
 
 
     </div>
