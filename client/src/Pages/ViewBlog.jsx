@@ -109,6 +109,12 @@ const ViewBlog = () => {
 
         <div className="flex flex-col justify-center items-start ">
         <b className="w-[98%] relative text-[2.188rem] capitalize inline-block font-inria-serif text-white text-left">U.S. Credit Unions Adopt Tokenization of Real World Assets</b>
+
+        <div className="flex mb-[37px] justify-between">
+                <div className="flex">
+
+                </div>
+        </div>
         </div>
         
       </div>
