@@ -141,8 +141,26 @@ const AddBlog = () => {
           />
         </div>
 
-        <div>
-            <img src="https://i.imgur.com/Pp7qZ4p.png" alt="" />
+        <div className="flex gap-20 w-full">
+        <img
+        src={'https://i.imgur.com/Pp7qZ4p.png'}
+        alt="Upload"
+        className="cursor-pointer w-[300px] object-contain"
+        onClick={handleImageClick}
+      />
+      <img
+        src={selectedImage || ''}
+        alt="Upload"
+        className={`cursor-pointer w-[400px] object-cover`}
+        onClick={handleImageClick}
+      />
+      <input
+        type="file"
+        ref={fileInputRef}
+        className="hidden"
+        accept="image/*"
+        onChange={handleFileChange}
+      />
         </div>
       </div>
       {/* main */}
