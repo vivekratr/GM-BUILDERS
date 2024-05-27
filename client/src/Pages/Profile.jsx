@@ -91,9 +91,9 @@ const Profile = () => {
           }`}
           onClick={() => handleButtonClick("Recommended For You")}
         >
-          Recommended For You
+          Your Article
           <div
-            className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
+            className={` relative box-border top-[10px] transition-all mx-auto duration-200 h-[0.031rem] border-t-[1px] border-solid border-white border-b-1 ${
               activeButton === "Recommended For You"
                 ? " w-full border-white"
                 : "w-0 "
@@ -106,7 +106,7 @@ const Profile = () => {
           }`}
           onClick={() => handleButtonClick("Trending")}
         >
-          Trending
+          Saved Article
           <div
             className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
               activeButton === "Trending" ? " w-full border-white" : "w-0 "
