@@ -161,6 +161,18 @@ export const BlogProvider = ({ children }) => {
   
     return resultArray;
   };
+
+  useEffect(() => {
+    async function a() {
+      processArray(allBlogs).then((result) => {
+        console.log(result);
+      });
+    }
+    a()
+  
+  
+  }, [allBlogs])
+  
   
 
   const handleProfileDataReturned = (data) => {
