@@ -60,7 +60,7 @@ const Profile = () => {
             <div className="col-span-5">
                 <div className="w-full h-full flex justify-end">
 
-            <div className="w-[270px] relative rounded-2xl [background:linear-gradient(180.13deg,_#202020,_#000)] box-border h-[14.75rem] overflow-hidden text-left text-[1rem] text-[#777] font-inter border-t-[2px] border-solid border-[#282828] border-r-[1px] border-l-[1px]">
+            <div className="w-[270px] relative rounded-2xl [background:linear-gradient(180.13deg,_#202020,_#000)] box-border h-[15.95rem] overflow-hidden text-left text-[1rem] text-[#777] font-inter border-t-[2px] border-solid border-[#282828] border-r-[1px] border-l-[1px]">
 
             </div>
                 </div>
