@@ -6,7 +6,7 @@ import PluralitySocialConnect from "plurality-social-connect";
 
 
 const Profile = () => {
-  const { childRef,
+  const { childRef,profileData,
   } = useContext(Context);
   const [activeButton, setActiveButton] = React.useState("Recommended For You");
   const [isConnected, setIsConnected] = useState(false);
