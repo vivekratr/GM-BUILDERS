@@ -96,9 +96,9 @@ const Home = () => {
     console.log(data)
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Read from contract:", receivedData);
-      setIsUserExist(receivedData.data)
-      alert(JSON.stringify(data));
-      return receivedData;
+      // setIsUserExist(receivedData.data)
+      // alert(JSON.stringify(data));
+      // return receivedData;
   };
   const handleWriteToContract = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
