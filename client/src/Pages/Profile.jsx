@@ -116,7 +116,7 @@ const Profile = () => {
           />
         </button>
       </div>
-      <div style={{ gridTemplateRows: `360px auto` }} className="grid py-20 w-[90%] mx-auto grid-cols-12 pt-[63px] gap-[45px]">
+      <div style={{ gridTemplateRows: `360px auto` }} className="grid py-0 w-[90%] mx-auto grid-cols-12 pt-[63px] gap-[45px]">
          {/* 1st col */}
          <div className="col-span-7 relative">
           <BackgroundImageDiv
