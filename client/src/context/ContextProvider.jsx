@@ -31,6 +31,7 @@ export const BlogProvider = ({ children }) => {
   const [isUserExist, setIsUserExist] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [allBlogs, setAllBlogs] = useState(null)
+  const [detailBlog, setDetailBlog] = useState(null)
 
 
   const isUserEXIST = async () => {
@@ -83,7 +84,7 @@ export const BlogProvider = ({ children }) => {
         // Call the isUserExist function
         const userExists = await contract.getAllBlogs();
         console.log("All Blogs", userExists);
-  
+        setAllBlogs(userExists)
       } catch (error) {
         console.error("Error reading from contract:", error);
       }
@@ -164,8 +165,9 @@ export const BlogProvider = ({ children }) => {
 
   useEffect(() => {
     async function a() {
-      processArray(allBlogs).then((result) => {
+     await processArray(allBlogs).then((result) => {
         console.log(result);
+        setDetailBlog(result);
       });
     }
     a()
