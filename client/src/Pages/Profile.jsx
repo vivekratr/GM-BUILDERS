@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 // import Navbar from "../components/Navbar";
 import BackgroundImageDiv from "../components/BGImageDiv";
 import { Context } from "../context/ContextProvider";
+import { abi, contractAddress } from "../utils/GMBUILDERS";
+
 import PluralitySocialConnect from "plurality-social-connect";
 import axios from "axios";
 
@@ -15,7 +17,7 @@ const Profile = () => {
   const handleProfileDataReturned = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get profile data:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
     childRef.current.closeSocialConnectPopup();
   };
 
@@ -23,57 +25,57 @@ const Profile = () => {
   const handleGetAllAccounts = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get all accounts:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleGetConnectedAccount = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get connected account:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleMessageSignature = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get message signature:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleVerifyMessageSignature = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Verify message signature:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleGetBalance = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get balance:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleSendTransaction = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Send transaction:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleGetBlockNumber = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get block number:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleGetTransactionCount = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get transaction count:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleReadFromContract = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Read from contract:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleWriteToContract = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Write to contract:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
   const handleErrorMessage = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get error message:", receivedData);
-    // alert(JSON.stringify(data));
+    alert(JSON.stringify(data));
   };
 
   // Function to handle the click on the visible button
@@ -101,7 +103,7 @@ React.useEffect(() => {
         {
           query: `
           {
-            userUpdateds(where: {userAddress: ${walletAddress}}) {
+            userUpdateds(where: {userAddress: "${walletAddress}"}) {
               interest
               name
               profileUrl
@@ -112,8 +114,10 @@ React.useEffect(() => {
           `,
         }
       );
-      console.log("gotti" ,response.data.userUpdateds)
-      setUserData(response.data);
+      console.log("gotti" ,response.data.data.userUpdateds[0])
+      setUserData(response.data.data.userUpdateds[0]);
+
+      PluralitySocialConnect.writeToContract(contractAddress,abi, "getUserProfile", [walletAddress])
     } catch (error) {
       // setError(error);
     } finally {
@@ -248,7 +252,11 @@ React.useEffect(() => {
           <div className="w-[100%] grid grid-cols-12 gap-6 ">
             <div className="col-span-5">
               <img
-                src="https://i.imgur.com/TP6GXuh.png"
+                src={
+                  isConnected
+                    ? (userData && userData.profileUrl ? userData.profileUrl : 'https://i.imgur.com/85UVZQv.png')
+                    : 'https://i.imgur.com/85UVZQv.png'
+                }
                 className=" w-full object-contain "
                 alt=""
               />
@@ -257,10 +265,11 @@ React.useEffect(() => {
               <div className="flex gap-4">
                 <div className="flex flex-col">
                   <b className="w-[10.75rem] relative text-[1.625rem] inline-block font-inter text-white text-left">
-                    Aditya Kumar
+                  {userData?.name ?? ''}
+
                   </b>
                   <div className="w-[10.125rem] relative text-[1.25rem] font-inter text-[#757575] text-left inline-block">
-                    @adityakumar.zk
+                  {userData?.username ?? ''}
                   </div>
                 </div>
                 <div className="w-[125px] relative rounded-[40px] bg-gray box-border h-[2.563rem] overflow-hidden text-left text-[1rem] text-white font-inter border-[1px] border-solid border-darkslategray">
