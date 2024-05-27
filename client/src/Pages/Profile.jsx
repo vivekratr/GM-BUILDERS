@@ -84,7 +84,7 @@ const Profile = () => {
 
       {/* user's article */}
       {/* toggle button */}
-      <div className="flex my-[60px] pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1140px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
+      <div className="flex pb-20 mt-[60px]  border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1140px]  min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-start px-[100px]">
         <button
           className={`focus:outline-none transition-all duration-200  ${
             activeButton === "Recommended For You" ? "" : " "
