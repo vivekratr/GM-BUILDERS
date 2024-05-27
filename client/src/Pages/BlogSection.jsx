@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, {useState, useState } from "react";
+import React, {useState,useContext } from "react";
 import Navbar from "../components/Navbar";
+import PluralitySocialConnect from "plurality-social-connect";
+
 import "./css/BlogSection.css";
 import BackgroundImageDiv from "../components/BGImageDiv";
 import { Context } from "../context/ContextProvider";
 
 const BlogSection = () => {
-  const { childRef,
+  const { childRef,profileData,
 } = useContext(Context);
   const [activeButton, setActiveButton] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
