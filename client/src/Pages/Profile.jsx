@@ -109,7 +109,8 @@ const Profile = () => {
         >
           Saved Article
           <div
-            className={` relative box-border top-[1.6rem] transition-all mx-auto duration-200 h-[0.031rem] border-t-[3px] border-solid border-white border-b-2 ${
+            className={` relative box-border top-[6px] transition-all mx-auto duration-200 h-[0.031rem] border-t-[1px] border-solid border-white border-b-1 ${
+
               activeButton === "Trending" ? " w-full border-white" : "w-0 "
             }`}
           />
