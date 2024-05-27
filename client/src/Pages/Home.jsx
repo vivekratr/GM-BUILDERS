@@ -16,7 +16,7 @@ import { abi, contractAddress } from "../utils/GMBUILDERS";
 
 const Home = () => {
  
-  const { childRef,profileData,setProfileData,setDatas,setWalletAddress,walletAddress,isUserExist,setIsUserExist
+  const { childRef,profileData,setProfileData,setDatas,setWalletAddress,walletAddress,isUserExist,setIsUserExist,datas
   } = useContext(Context);
   const hiddenButtonWrapperRef = React.useRef(null);
   const [isConnected, setIsConnected] = useState(false);
@@ -96,6 +96,7 @@ const Home = () => {
     console.log(data)
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Read from contract:", receivedData);
+      setIsUserExist(receivedData.data)
       // alert(JSON.stringify(data));
       return receivedData;
   };
@@ -137,17 +138,20 @@ const Home = () => {
   React.useEffect(() => {
 
     async function readUserExist() {
-     
+     console.log("aagaya" ,isUserExist)
        
-      if (isus) {
-         await PluralitySocialConnect.readFromContract(contractAddress,abi,"isUserExist")
-         await PluralitySocialConnect.getConnectedAccount()
+     if (!isUserExist) {
+       if (profileData && datas) {
+         console.log("bhai write ho raha",`${profileData.displayName},${profileData.name},${datas.assetData},${profileData.profileUrl}`)
+         await PluralitySocialConnect.writeToContract(contractAddress,abi, "setUser",  [profileData.displayName, profileData.name, datas.assetData, profileData.profileUrl])
+        }
+        
       }
  
      }
    readUserExist()
      
-   }, [profileData])
+   }, [isUserExist,datas,profileData])
   
   return (
     <>
