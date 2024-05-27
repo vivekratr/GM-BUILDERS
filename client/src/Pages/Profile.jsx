@@ -84,7 +84,7 @@ const Profile = () => {
 
       {/* user's article */}
       {/* toggle button */}
-      <div className="flex mb-[60px] pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1140px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
+      <div className="flex my-[60px] pb-4 border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1140px] mx-auto min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-evenly">
         <button
           className={`focus:outline-none transition-all duration-200  ${
             activeButton === "Recommended For You" ? "" : " "
@@ -93,7 +93,7 @@ const Profile = () => {
         >
           Your Article
           <div
-            className={` relative box-border top-[10px] transition-all mx-auto duration-200 h-[0.031rem] border-t-[1px] border-solid border-white border-b-1 ${
+            className={` relative box-border top-[6px] transition-all mx-auto duration-200 h-[0.031rem] border-t-[1px] border-solid border-white border-b-1 ${
               activeButton === "Recommended For You"
                 ? " w-full border-white"
                 : "w-0 "
