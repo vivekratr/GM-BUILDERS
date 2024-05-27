@@ -24,6 +24,8 @@ const Profile = () => {
 <div className="absolute top-[0.688rem] left-[1.313rem] font-medium">Edit Profile</div>
 </div>
     </div>
+    <div className="w-[5.75rem] relative text-[1.125rem] font-inter text-white text-left inline-block">{` Developer `}</div>
+    <div className="w-[7.375rem] relative text-[1.125rem] font-inter text-white text-left inline-block">I like blogging</div>
         
     </div>
 </div>
