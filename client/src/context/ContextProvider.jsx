@@ -25,7 +25,9 @@ const getEthereumContract = () => {
 export const BlogProvider = ({ children }) => {
   const childRef = React.useRef(null);
   const [datas, setDatas] = React.useState("");
+  const [walletAddress, setWalletAddress] = useState('')
   const [profileData, setProfileData] = useState(null);
+  const [isUserExist, setIsUserExist] = useState(false);
 
   const handleProfileDataReturned = (data) => {
     try {
@@ -135,9 +137,15 @@ export const BlogProvider = ({ children }) => {
         handleErrorMessage,
         renderData,
         getEthereumContract,
+        setDatas,
+        setProfileData,
+        setWalletAddress,
+        setIsUserExist,
         childRef,
+        walletAddress,
         datas,
         profileData,
+        isUserExist,
       }}
     >
       {children}

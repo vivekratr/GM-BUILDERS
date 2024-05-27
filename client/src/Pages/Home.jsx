@@ -10,32 +10,57 @@ import Footer from "../components/Footer";
 // import React from "react";
 import PluralitySocialConnect from 'plurality-social-connect';
 import { Context } from "../context/ContextProvider";
+import { abi, contractAddress } from "../utils/GMBUILDERS";
+
 
 
 const Home = () => {
-  const { childRef,profileData,
+ 
+  const { childRef,profileData,setProfileData,setDatas,setWalletAddress,walletAddress,
   } = useContext(Context);
   const hiddenButtonWrapperRef = React.useRef(null);
   const [isConnected, setIsConnected] = useState(false);
 
 
-  const handleProfileDataReturned = (data ) => {
-    const receivedData = JSON.parse(JSON.stringify(data))
-    console.log("Get profile data:", receivedData);
-    alert(JSON.stringify(data));
-    childRef.current.closeSocialConnectPopup();
+  const handleProfileDataReturned = (data) => {
+    try {
+      const receivedData = data.data; // Access the data array correctly
+      console.log("dapp receives:", receivedData);
+
+      if (receivedData && receivedData.length > 0) {
+        // Ensure there is at least one element in the array
+        const firstProfileData = receivedData[0]["profileData"];
+
+        if (firstProfileData) {
+          const _profileData = JSON.parse(firstProfileData); // Parse the profileData string
+          setDatas(receivedData[0]); // Update the state with the first item in the data array
+          setProfileData(_profileData); // Update the state with the parsed profileData
+        } else {
+          console.error("Profile data is undefined");
+        }
+      } else {
+        console.error("Received data is empty or undefined");
+      }
+    } catch (error) {
+      console.error("Error processing profile data:", error);
+    }
+
+    if (childRef.current) {
+      childRef.current.closeSocialConnectPopup(); // Ensure the childRef is defined before accessing
+    }
   };
 
   // Web3 function handles
   const handleGetAllAccounts = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get all accounts:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetConnectedAccount = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
-      console.log("Get connected account:", receivedData);
-      alert(JSON.stringify(data));
+      console.log("Get connected account:", receivedData.data.address);
+      setWalletAddress(receivedData.data.address)
+      // alert(JSON.stringify(data));
   };
   const handleMessageSignature = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
@@ -68,9 +93,11 @@ const Home = () => {
       alert(JSON.stringify(data));
   };
   const handleReadFromContract = (data ) => {
+    console.log(data)
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Read from contract:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
+      return receivedData;
   };
   const handleWriteToContract = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
@@ -96,10 +123,31 @@ const Home = () => {
 
   React.useEffect(() => {
 
+   async function readUserExist() {
     
-  
+      
+      await PluralitySocialConnect.readFromContract(contractAddress,abi,"isUserExist")
+      await PluralitySocialConnect.getConnectedAccount()
+
+    }
+  readUserExist()
     
-  }, [])
+  }, [profileData])
+
+  React.useEffect(() => {
+
+    async function readUserExist() {
+     
+       
+      if (isus) {
+         await PluralitySocialConnect.readFromContract(contractAddress,abi,"isUserExist")
+         await PluralitySocialConnect.getConnectedAccount()
+      }
+ 
+     }
+   readUserExist()
+     
+   }, [profileData])
   
   return (
     <>
@@ -164,8 +212,8 @@ const Home = () => {
         <div ref={hiddenButtonWrapperRef} style={{ display: "none" }}>
           <PluralitySocialConnect
             options={{ apps: "facebook,twitter" }}
-            onProfileDataReturned={async (d) => {
-              await handleProfileDataReturned(d);
+            onProfileDataReturned={ (d) => {
+               handleProfileDataReturned(d);
               setIsConnected(true);
             }}
             onGetAllAccounts={handleGetAllAccounts}
@@ -176,7 +224,9 @@ const Home = () => {
             onSendTransaction={handleSendTransaction}
             onGetBlockNumber={handleGetBlockNumber}
             onGetTransactionCount={handleGetTransactionCount}
-            onReadFromContract={handleReadFromContract}
+            onReadFromContract={(d)=>{
+              console.log('bhaiya',d)
+              handleReadFromContract(d)}}
             onWriteToContract={handleWriteToContract}
             onErrorMessage={handleErrorMessage}
             // all customization params are optional
