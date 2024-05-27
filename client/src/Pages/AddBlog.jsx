@@ -4,8 +4,13 @@ import { Context } from "../context/ContextProvider";
 import axios from "axios";
 import { NFTStorage, File, Blob } from "nft.storage";
 import { abi, contractAddress } from "../utils/GMBUILDERS";
+import Loader from '../components/Loader.jsx'
+import { useNavigate } from "react-router-dom";
+
 
 const AddBlog = () => {
+
+  const navigate = useNavigate()
   const {
     handleProfileDataReturned,
     // handleGetAllAccounts,
@@ -34,6 +39,7 @@ const AddBlog = () => {
   const [refLink, setRefLink] = useState("");
   const [ytLink, setYtLink] = useState("");
   const [image, setImage] = useState(null);
+  const [spinner, setSpinner] = useState(false)
 
   const hiddenButtonWrapperRef = React.useRef(null);
   const fileInputRef = useRef(null);
@@ -168,12 +174,14 @@ const AddBlog = () => {
     }
   };
   const handleUpload1 = async () => {
+    setSpinner(true)
     if (!image) {
       alert("Please select a file first!");
       return;
     }
 
     try {
+      
       const client = new NFTStorage({ token: NFT_STORAGE_TOKEN });
       const imageFile = await handleUpload();
 
@@ -210,9 +218,12 @@ const AddBlog = () => {
       const cids = await client.storeBlob(nftFile);
       setCid(`https://${cids}.ipfs.nftstorage.link/`);
       console.log(`https://${cids}.ipfs.nftstorage.link/`);
-      writeBlog(`https://${cids}.ipfs.nftstorage.link/`,tagsArray)
+      await writeBlog(`https://${cids}.ipfs.nftstorage.link/`,tagsArray,setSpinner)
       // alert('File uploaded successfully! CID: ' + cid);
+      navigate('/')
     } catch (error) {
+      setSpinner(false)
+
       console.error("Upload failed:", error);
       // alert('Upload failed!');
     }
@@ -253,7 +264,19 @@ const AddBlog = () => {
   }, []);
 
   return (
-    <div className="bg-black pb-12">
+    <div className="bg-black pb-12 relative">
+      {/* loader */}
+      <div
+          className={` top-0 left-0 w-full h-full z-40 backdrop-filter backdrop-blur-sm ${
+            spinner ? "fixed" : "hidden"
+          } `}
+        >
+           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center justify-center min-h-[70vh] ">
+
+        <Loader run ={spinner}/>
+           </div>
+      </div>
+
       {/* Navbar */}
       <div className="flex justify-between items-center bg-black p-[18px]">
         <div className="w-[128px] h-[103px] object-cover">

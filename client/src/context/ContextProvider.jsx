@@ -30,6 +30,7 @@ export const BlogProvider = ({ children }) => {
   const [profileData, setProfileData] = useState(null);
   const [isUserExist, setIsUserExist] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
+  const [allBlogs, setAllBlogs] = useState(null)
 
 
   const isUserEXIST = async () => {
@@ -62,8 +63,39 @@ export const BlogProvider = ({ children }) => {
     }
   };
 
+  const getAllBLOGS = async () => {
+    if (typeof window.ethereum !== 'undefined') {
+      try {
+        // Request account access if needed
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+  
+        // Connect to the Ethereum network
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        
+        // Log the connected account address
+        const account = await signer.getAddress();
+        console.log("Account address:", account);
+  
+        // Instantiate the contract
+        const contract = new ethers.Contract(contractAddress, contractABI, signer);
+  
+        // Call the isUserExist function
+        const userExists = await contract.getAllBlogs();
+        console.log("All Blogs", userExists);
+  
+      } catch (error) {
+        console.error("Error reading from contract:", error);
+      }
+    } else {
+      console.log('MetaMask is not installed');
+    }
+  };
 
-  const writeBlog = async (link , arr) => {
+
+
+
+  const writeBlog = async (link , arr,setSpinner) => {
     if (typeof window.ethereum !== 'undefined') {
       try {
         await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -77,10 +109,15 @@ export const BlogProvider = ({ children }) => {
         const contract = new ethers.Contract(contractAddress, contractABI, signer);
   
         const userExists = await contract.createBlog(link ,arr);
+        userExists.wait()
         console.log("User exists:", userExists);
-        setIsUserExist(userExists)
+        // setIsUserExist(userExists)
+      setSpinner(false)
+
   
       } catch (error) {
+      setSpinner(false)
+
         console.error("Error reading from contract:", error);
       }
     } else {
@@ -90,8 +127,40 @@ export const BlogProvider = ({ children }) => {
   useEffect(() => {
     
   isUserEXIST()
+  getAllBLOGS()
     
   }, [datas])
+
+  const fetchDataFromIPFS = async (url) => {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('There has been a problem with your fetch operation:', error);
+    }
+  };
+  
+  const processArray = async (array) => {
+    const resultArray = {};
+  
+    for (let i = 0; i < array.length; i++) {
+      const element = array[i];
+      const ipfsLink = element[0];
+  
+      try {
+        const data = await fetchDataFromIPFS(ipfsLink);
+        resultArray[i] = data;
+      } catch (error) {
+        console.error(`Error fetching data for index ${i}:`, error);
+      }
+    }
+  
+    return resultArray;
+  };
   
 
   const handleProfileDataReturned = (data) => {
