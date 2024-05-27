@@ -349,12 +349,13 @@ const AddBlog = () => {
       {/* Main */}
       <div className="w-[80%] pt-7 pl-[77px] pb-10 pr-[49px] mx-auto flex flex-col items-start justify-start relative rounded-[20px] bg-[#111] box-border overflow-hidden text-left text-[1.375rem] text-[#7a7a7a] font-inria-serif border-[1px] border-solid border-[#282828]">
         {/* AI */}
-        <div className="cursor-pointer w-full relative flex items-center justify-end">
+        <div  className="cursor-pointer w-full relative flex items-center justify-end">
+          <a href="https://bafybeifo52cu534pqny7zkxuy5qz6k53dyaryfzjj4nzujpsanrvkhjpge.ipfs.nftstorage.link/metadata.json">
           <div className="w-[121px] relative rounded-[5px] box-border h-[2.813rem] overflow-hidden text-center text-[1rem] text-white font-inria-serif border-[1px] border-solid border-[#545454]">
             <div className="flex items-center justify-center w-full h-full capitalize">
               AI assistant
             </div>
-          </div>
+          </div></a>
         </div>
         <div className="pb-9">
           <input
