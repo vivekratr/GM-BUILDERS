@@ -3,141 +3,145 @@ import { ethers, utils } from "ethers";
 import { contractABI, contractAddress } from "../utils/GMBUILDERS";
 import axios from "axios";
 
-
 export const Context = React.createContext();
-
 
 // eslint-disable-next-line react/prop-types
 export const BlogProvider = ({ children }) => {
   const childRef = React.useRef(null);
   const [datas, setDatas] = React.useState("");
-  const [walletAddress, setWalletAddress] = useState('')
+  const [walletAddress, setWalletAddress] = useState("");
   const [profileData, setProfileData] = useState(null);
   const [isUserExist, setIsUserExist] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
-  const [allBlogs, setAllBlogs] = useState(null)
-  const [detailBlog, setDetailBlog] = useState(null)
-  const [recommendBlog, setRecommendBlog] = useState(null)
-
+  const [allBlogs, setAllBlogs] = useState(null);
+  const [detailBlog, setDetailBlog] = useState(null);
+  const [recommendBlog, setRecommendBlog] = useState(null);
 
   const isUserEXIST = async () => {
-    if (typeof window.ethereum !== 'undefined') {
+    if (typeof window.ethereum !== "undefined") {
       try {
         // Request account access if needed
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-  
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+
         // Connect to the Ethereum network
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
-        
+
         // Log the connected account address
         const account = await signer.getAddress();
         console.log("Account address:", account);
-  
+
         // Instantiate the contract
-        const contract = new ethers.Contract(contractAddress, contractABI, signer);
-  
+        const contract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+
         // Call the isUserExist function
         const userExists = await contract.isUserExist();
         console.log("User exists:", userExists);
-        setIsUserExist(userExists)
-  
+        setIsUserExist(userExists);
       } catch (error) {
         console.error("Error reading from contract:", error);
       }
     } else {
-      console.log('MetaMask is not installed');
+      console.log("MetaMask is not installed");
     }
   };
 
   const getAllBLOGS = async () => {
-    if (typeof window.ethereum !== 'undefined') {
+    if (typeof window.ethereum !== "undefined") {
       try {
         // Request account access if needed
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-  
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+
         // Connect to the Ethereum network
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
-        
+
         // Log the connected account address
         const account = await signer.getAddress();
         console.log("Account address:", account);
-  
+
         // Instantiate the contract
-        const contract = new ethers.Contract(contractAddress, contractABI, signer);
-  
+        const contract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+
         // Call the isUserExist function
         const userExists = await contract.getAllBlogs();
         console.log("All Blogs", userExists);
-        setAllBlogs(userExists)
+        setAllBlogs(userExists);
       } catch (error) {
         console.error("Error reading from contract:", error);
       }
     } else {
-      console.log('MetaMask is not installed');
+      console.log("MetaMask is not installed");
     }
   };
 
-
-
-
-  const writeBlog = async (link , arr,setSpinner) => {
-    if (typeof window.ethereum !== 'undefined') {
+  const writeBlog = async (link, arr, setSpinner) => {
+    if (typeof window.ethereum !== "undefined") {
       try {
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-  
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
-        
+
         const account = await signer.getAddress();
         console.log("Account address:", account);
-  
-        const contract = new ethers.Contract(contractAddress, contractABI, signer);
-  
-        const userExists = await contract.createBlog(link ,arr);
-        userExists.wait()
+
+        const contract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+
+        const userExists = await contract.createBlog(link, arr);
+        userExists.wait();
         console.log("User exists:", userExists);
         // setIsUserExist(userExists)
-      setSpinner(false)
-
-  
+        setSpinner(false);
       } catch (error) {
-      setSpinner(false)
+        setSpinner(false);
 
         console.error("Error reading from contract:", error);
       }
     } else {
-      console.log('MetaMask is not installed');
+      console.log("MetaMask is not installed");
     }
   };
   useEffect(() => {
-    
-  isUserEXIST()
-  getAllBLOGS()
-    
-  }, [datas])
+    isUserEXIST();
+    getAllBLOGS();
+  }, [datas]);
 
   const fetchDataFromIPFS = async (url) => {
     try {
       const response = await fetch(url);
       if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
+        throw new Error("Network response was not ok " + response.statusText);
       }
       const data = await response.json();
       return data;
     } catch (error) {
-      console.error('There has been a problem with your fetch operation:', error);
+      console.error(
+        "There has been a problem with your fetch operation:",
+        error
+      );
     }
   };
-  
+
   const processArray = async (array) => {
     const resultArray = {};
-  
+
     for (let i = 0; i < array.length; i++) {
       const element = array[i];
       const ipfsLink = element[0];
-  
+
       try {
         const data = await fetchDataFromIPFS(ipfsLink);
         resultArray[i] = data;
@@ -145,15 +149,15 @@ export const BlogProvider = ({ children }) => {
         console.error(`Error fetching data for index ${i}:`, error);
       }
     }
-  
+
     return resultArray;
   };
   const processArray1 = async (array) => {
     const resultArray = {};
-  
+
     for (let i = 0; i < array.length; i++) {
       const ipfsLink = array[i];
-  
+
       try {
         const data = await fetchDataFromIPFS(ipfsLink);
         resultArray[i] = data;
@@ -161,46 +165,41 @@ export const BlogProvider = ({ children }) => {
         console.error(`Error fetching data for index ${i}:`, error);
       }
     }
-  
+
     return resultArray;
   };
 
   useEffect(() => {
     async function a() {
-     
-     await processArray(allBlogs).then((result) => {
+      await processArray(allBlogs).then((result) => {
         console.log(result);
         setDetailBlog(result);
       });
     }
-    a()
-  
-  
-  }, [allBlogs])
+    a();
+  }, [allBlogs]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post('https://blogbot.onrender.com/recomm', {
-          intrests:["blockchain", "AI","stock"]
-        });
-        console.log(response.data); 
+        const response = await axios.post(
+          "https://blogbot.onrender.com/recomm",
+          {
+            intrests: ["blockchain", "AI", "stock"],
+          }
+        );
+        console.log(response.data);
         await processArray1(response.data).then((result) => {
-          console.log("recommendedBlog",result);
+          console.log("recommendedBlog", result);
           setRecommendBlog(result);
         });
-      
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-
-   
   }, [profileData]);
-  
-  
 
   const handleProfileDataReturned = (data) => {
     try {
