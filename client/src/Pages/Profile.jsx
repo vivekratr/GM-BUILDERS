@@ -9,7 +9,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="bg-black flex flex-col gap-7">
+    <div className="bg-black ">
       <div className="mb-[54px]">
         <Navbar />
       </div>
@@ -116,11 +116,11 @@ const Profile = () => {
           />
         </button>
       </div>
-      <div className="grid py-20 w-[80%] mx-auto grid-cols-12 ">
+      <div style={{ gridTemplateRows: `360px auto` }} className="grid py-20 w-[90%] mx-auto grid-cols-12 pt-[63px] gap-[45px]">
          {/* 1st col */}
          <div className="col-span-7 relative">
           <BackgroundImageDiv
-            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            classs={""}
             imageUrl="https://i.imgur.com/p1CFttI.png"
           >
             <div className="flex flex-col  items-start justify-end h-full p-3">
@@ -148,7 +148,7 @@ const Profile = () => {
          {/* 2nd col */}
          <div className="col-span-5 relative">
           <BackgroundImageDiv
-            classs={"border-[1px] border-solid border-[#3b3b3b]"}
+            // classs={"border-[1px] border-solid border-[#3b3b3b]"}
             imageUrl="https://i.imgur.com/p1CFttI.png"
           >
             <div className="flex flex-col  items-start justify-end h-full p-3">
