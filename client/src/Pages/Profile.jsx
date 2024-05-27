@@ -9,11 +9,11 @@ const Profile = () => {
   };
 
   return (
-    <div className="bg-black">
+    <div className="bg-black flex flex-col gap-7">
       <div className="mb-[54px]">
         <Navbar />
       </div>
-      <div className="w-[80%] mx-auto relative rounded-[14px] bg-[#1a1a1a] pt-[31px] pl-[34px] pb-9 pr-4 grid grid-cols-12  overflow-hidden text-left text-[1rem] text-white font-inter ">
+      <div className="w-[90%] mx-auto relative rounded-[14px] bg-[#1a1a1a] pt-[31px] pl-[34px] pb-9 pr-4 grid grid-cols-12  overflow-hidden text-left text-[1rem] text-white font-inter ">
         <div className=" col-span-7">
           <div className="w-[100%] grid grid-cols-12 gap-6 ">
             <div className="col-span-5">
@@ -85,7 +85,7 @@ const Profile = () => {
 
       {/* user's article */}
       {/* toggle button */}
-      <div className="flex pb-20 mt-[60px]  border-b-[0.1px] border-solid border-white transition-all duration-150 w-[1140px]  min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-start px-[100px]">
+      <div className="flex pb-20 my-[80px] transition-all duration-150 w-[1140px]  min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-start px-[100px]">
         <button
           className={`focus:outline-none transition-all duration-200  ${
             activeButton === "Recommended For You" ? "" : " "
@@ -115,7 +115,7 @@ const Profile = () => {
           />
         </button>
       </div>
-      <div className="grid w-[80%] mx-auto grid-cols-12 ">
+      <div className="grid py-20 w-[80%] mx-auto grid-cols-12 ">
          {/* 1st col */}
          <div className="col-span-7 relative">
           <BackgroundImageDiv
