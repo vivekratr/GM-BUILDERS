@@ -1,0 +1,7 @@
+Flask
+google.generativeai
+flask_cors
+newsapi-python
+google-api-python-client
+pymongo
+gunicorn
