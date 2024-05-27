@@ -29,6 +29,7 @@ const AddBlog = () => {
     writeBlog,
     allBlogs,
     detailBlog,
+    recommendBlog,
   } = useContext(Context);
 
   const [title, setTitle] = useState("");

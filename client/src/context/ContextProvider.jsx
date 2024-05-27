@@ -182,7 +182,7 @@ export const BlogProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const response = await axios.post('https://blogbot.onrender.com/recomm', {
-          intrests:profileData.assetData
+          intrests:["blockchain", "AI"]
         });
         console.log(response.data); 
         await processArray1(response.data).then((result) => {
@@ -309,7 +309,6 @@ export const BlogProvider = ({ children }) => {
         handleWriteToContract,
         handleErrorMessage,
         renderData,
-        getEthereumContract,
         setDatas,
         setProfileData,
         setWalletAddress,
@@ -323,6 +322,7 @@ export const BlogProvider = ({ children }) => {
         isUserExist,
         isConnected,
         allBlogs,
+        recommendBlog,
         detailBlog,
       }}
     >
