@@ -176,10 +176,7 @@ export const BlogProvider = ({ children }) => {
 
     fetchData();
 
-    // Optionally, you can return a cleanup function if needed
-    return () => {
-      // Cleanup code here (if needed)
-    };
+   
   }, [profileData]);
   
   
