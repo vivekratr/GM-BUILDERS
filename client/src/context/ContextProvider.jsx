@@ -62,6 +62,31 @@ export const BlogProvider = ({ children }) => {
     }
   };
 
+
+  const writeBlog = async (link , arr) => {
+    if (typeof window.ethereum !== 'undefined') {
+      try {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+  
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        
+        const account = await signer.getAddress();
+        console.log("Account address:", account);
+  
+        const contract = new ethers.Contract(contractAddress, contractABI, signer);
+  
+        const userExists = await contract.createBlog(link ,arr);
+        console.log("User exists:", userExists);
+        setIsUserExist(userExists)
+  
+      } catch (error) {
+        console.error("Error reading from contract:", error);
+      }
+    } else {
+      console.log('MetaMask is not installed');
+    }
+  };
   useEffect(() => {
     
   isUserEXIST()
@@ -182,6 +207,7 @@ export const BlogProvider = ({ children }) => {
         setWalletAddress,
         setIsUserExist,
         setIsConnected,
+        writeBlog,
         childRef,
         walletAddress,
         datas,
