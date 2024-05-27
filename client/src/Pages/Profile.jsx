@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import BackgroundImageDiv from "../components/BGImageDiv";
 
 const Profile = () => {
-  const [activeButton, setActiveButton] = React.useState(null);
+  const [activeButton, setActiveButton] = React.useState('Recommended For You');
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
@@ -13,7 +13,7 @@ const Profile = () => {
       <div className="mb-[54px]">
         <Navbar />
       </div>
-      <div className="w-[90%] mx-auto relative rounded-[14px] bg-[#1a1a1a] pt-[31px] pl-[34px] pb-9 pr-4 grid grid-cols-12  overflow-hidden text-left text-[1rem] text-white font-inter ">
+      <div className="w-[90%] mx-auto relative rounded-[14px] bg-[#1a1a1a] pt-[31px] pl-[34px] pb-1 pr-4 grid grid-cols-12  overflow-hidden text-left text-[1rem] text-white font-inter ">
         <div className=" col-span-7">
           <div className="w-[100%] grid grid-cols-12 gap-6 ">
             <div className="col-span-5">
@@ -85,7 +85,7 @@ const Profile = () => {
 
       {/* user's article */}
       {/* toggle button */}
-      <div className="flex pb-20 my-[80px] transition-all duration-150 w-[1140px]  min-h-[62px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-start px-[100px]">
+      <div className="flex  mt-[80px] transition-all duration-150 w-[1140px]  min-h-[22px] text-[1.125rem] capitalize font-medium font-inter text-white text-left gap-x-12 items-center justify-start px-[100px]">
         <button
           className={`focus:outline-none transition-all duration-200  ${
             activeButton === "Recommended For You" ? "" : " "
