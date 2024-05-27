@@ -78,7 +78,6 @@ const Profile = () => {
       </div>
 
       {/* user's article */}
-      
     </div>
   );
 };
