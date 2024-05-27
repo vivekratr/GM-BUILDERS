@@ -185,8 +185,8 @@ export const BlogProvider = ({ children }) => {
           intrests:profileData.assetData
         });
         console.log(response.data); 
-        await processArray(response.data).then((result) => {
-          console.log(result);
+        await processArray1(response.data).then((result) => {
+          console.log("recommendedBlog",result);
           setRecommendBlog(result);
         });
       
