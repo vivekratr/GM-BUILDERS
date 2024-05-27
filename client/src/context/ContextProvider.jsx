@@ -148,6 +148,22 @@ export const BlogProvider = ({ children }) => {
   
     return resultArray;
   };
+  const processArray1 = async (array) => {
+    const resultArray = {};
+  
+    for (let i = 0; i < array.length; i++) {
+      const ipfsLink = array[i];
+  
+      try {
+        const data = await fetchDataFromIPFS(ipfsLink);
+        resultArray[i] = data;
+      } catch (error) {
+        console.error(`Error fetching data for index ${i}:`, error);
+      }
+    }
+  
+    return resultArray;
+  };
 
   useEffect(() => {
     async function a() {
@@ -169,6 +185,11 @@ export const BlogProvider = ({ children }) => {
           intrests:profileData.assetData
         });
         console.log(response.data); 
+        await processArray(response.data).then((result) => {
+          console.log(result);
+          setRecommendBlog(result);
+        });
+      
       } catch (error) {
         console.error('Error fetching data:', error);
       }
