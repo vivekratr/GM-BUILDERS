@@ -368,9 +368,12 @@ const BlogSection = () => {
       >
         {/* 1st row */}
         {/* 1st column */}
-        <div onClick={()=>{
-           navigate(`/blogview?data=1?blog=${activeButton}`);
-        }} className="relative col-span-7">
+        <div
+          onClick={() => {
+            navigate(`/blogview?data=1?blog=${activeButton}`);
+          }}
+          className="relative col-span-7"
+        >
           <div
             key={currentBlog}
             className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]"
@@ -417,9 +420,12 @@ const BlogSection = () => {
           </BackgroundImageDiv>
         </div>
         {/* 2nd column */}
-        <div onClick={()=>{
-           navigate(`/blogview?data=2?blog=${activeButton}`);
-        }} className="relative col-span-5">
+        <div
+          onClick={() => {
+            navigate(`/blogview?data=2?blog=${activeButton}`);
+          }}
+          className="relative col-span-5"
+        >
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
             classs={"border-[1px] border-solid border-[#3b3b3b]"}
@@ -461,9 +467,12 @@ const BlogSection = () => {
 
         {/* 2nd row */}
         {/* 1st column */}
-        <div onClick={()=>{
-           navigate(`/blogview?data=3?blog=${activeButton}`);
-        }} className="relative col-span-4">
+        <div
+          onClick={() => {
+            navigate(`/blogview?data=3?blog=${activeButton}`);
+          }}
+          className="relative col-span-4"
+        >
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
             classs={"border-[1px] border-solid border-[#3b3b3b]"}
@@ -503,9 +512,13 @@ const BlogSection = () => {
           </BackgroundImageDiv>
         </div>
         {/* 2nd column */}
-        <div key={currentBlog} onClick={()=>{
-           navigate(`/blogview?data=4?blog=${activeButton}`);
-        }} className="relative col-span-4">
+        <div
+          key={currentBlog}
+          onClick={() => {
+            navigate(`/blogview?data=4?blog=${activeButton}`);
+          }}
+          className="relative col-span-4"
+        >
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
             classs={"border-[1px] border-solid border-[#3b3b3b]"}
@@ -541,9 +554,12 @@ const BlogSection = () => {
           </BackgroundImageDiv>
         </div>
         {/* 3rd column */}
-        <div onClick={()=>{
-           navigate(`/blogview?data=1?blog=${activeButton}`);
-        }} className="relative col-span-4">
+        <div
+          onClick={() => {
+            navigate(`/blogview?data=1?blog=${activeButton}`);
+          }}
+          className="relative col-span-4"
+        >
           <div className="w-full relative [background:linear-gradient(180deg,_rgba(0,_0,_0,_0),_#000_50.9%)] h-[15.563rem]" />
           <BackgroundImageDiv
             classs={"border-[1px] border-solid border-[#3b3b3b]"}
