@@ -2,4 +2,4 @@ import abi from './GMBUILDERS.json'
 
 export const contractABI = abi;
 
-export const contractAddress='0xc69CDb82B2A6D69A8e71f9FFf75EcD69ad080DDc';
+export const contractAddress='0x02e5de52AA3ebE9000d3716fEB1F3f8F80B321AD';
