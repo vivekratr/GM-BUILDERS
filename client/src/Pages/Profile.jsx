@@ -11,8 +11,12 @@ const Profile = () => {
 <div className=' col-span-7'>
 
 <div className='w-[100%] grid grid-cols-12 gap-6 '>
-    div.
-
+    <div className="col-span-5">
+    <img src="https://i.imgur.com/TP6GXuh.png"  className=' w-full object-contain ' alt="" />
+    </div>
+ <div className="col-span-7">
+        
+    </div>
 </div>
 </div>
         </div>
