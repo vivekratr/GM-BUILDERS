@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Graph = () => {
   const [data, setData] = useState(null);
@@ -10,7 +10,7 @@ const Graph = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          'https://api.studio.thegraph.com/query/75757/gmbuilders/version/latest',
+          "https://api.studio.thegraph.com/query/75757/gmbuilders/version/latest",
           {
             query: `
             {
@@ -23,7 +23,7 @@ const Graph = () => {
                   username
                 }
               }
-            `
+            `,
           }
         );
         setData(response.data);
