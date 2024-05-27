@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import BackgroundImageDiv from "../components/BGImageDiv";
 import { Context } from "../context/ContextProvider";
 import PluralitySocialConnect from "plurality-social-connect";
+import axios from "axios";
 
 const Profile = () => {
   const { childRef, profileData, isConnected, setIsConnected } =
@@ -89,6 +90,39 @@ const Profile = () => {
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
+  const [userData, setUserData] = React.useState(null)
+React.useEffect(() => {
+  
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.post(
+        "https://api.studio.thegraph.com/query/75757/gmbuildersv1/version/latest",
+        {
+          query: `
+          {
+            userUpdateds(where: {userAddress: "0xD3Ee2A4E3B9425F45D3247Bb8D8dA7b930830b75"}) {
+              interest
+              name
+              profileUrl
+              userAddress
+              username
+            }
+          }
+          `,
+        }
+      );
+      console.log("gotti" ,response.data)
+      setUserData(response.data);
+    } catch (error) {
+      // setError(error);
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  fetchData();
+}, [])
 
   return (
     <div className="bg-black ">
