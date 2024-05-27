@@ -32,8 +32,7 @@ const Home_comp2 = () => {
               </b>
 
               <div className="w-[90%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#a8a8a8] text-left inline-block">
-                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
-                convallis pellentesque blandit facilisis.
+              explores the potential of Web 3.0 technologies to revolutionize the internet by enhancing decentralization, security, and user control over data through blockchain and decentralized applications (dApps).
               </div>
 
               <div className="w-full flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
@@ -63,8 +62,7 @@ const Home_comp2 = () => {
               </b>
 
               <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-white text-left inline-block">
-                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
-                convallis pellentesque blandit facilisis.
+              American credit unions are integrating blockchain technology to tokenize real-world assets, aiming to improve transparency, security, and liquidity in financial transactions.
               </div>
 
               <div className="w-full pt-3 flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
@@ -88,12 +86,11 @@ const Home_comp2 = () => {
               </div>
 
               <b className="w-[97%] pt-3 relative text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
-                U.S. Credit Unions Adopt Tokenization of Real World Assets
+              The Rise of Quantum Computing: What You Need to Know
               </b>
 
               <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-[#A8A8A8] text-left inline-block">
-                Lorem ipsum dolor sit amet consectetur. Sagittis urna adipiscing
-                convallis pellentesque blandit facilisis.
+              This article explores the fundamentals of quantum computing, its potential applications, and how it could revolutionize industries from cryptography to drug discovery.
               </div>
 
               <div className="w-full pt-3 flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
@@ -122,7 +119,7 @@ const Home_comp2 = () => {
               </b>
 
               <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-white text-left inline-block">
-                Lorem ipsum dolor sit amet consectetur. Sagittis urna s.
+              Non-Fungible Tokens as unique digital assets verified by blockchain, representing ownership of items like digital art and music
               </div>
 
               <div className="w-full pt-3 flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
@@ -149,11 +146,11 @@ const Home_comp2 = () => {
               </div>
 
               <b className="w-[97%] pt-3 relative text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
-                What is NFT?
+              The Impact of AI on Healthcare
               </b>
 
               <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-white text-left inline-block">
-                Lorem ipsum dolor sit amet consectetur. Sagittis urna s.
+              Discussing the transformative effects of artificial intelligence on healthcare, including improved diagnostics, personalized medicine, and more efficient patient care.
               </div>
 
               <div className="w-full pt-3 flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
@@ -176,11 +173,11 @@ const Home_comp2 = () => {
               </div>
 
               <b className="w-[97%] pt-3 relative text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
-                What is NFT?
+              Climate Change and Its Global Economic Implications
               </b>
 
               <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-white text-left inline-block">
-                Lorem ipsum dolor sit amet consectetur. Sagittis urna s.
+              Overview of electric vehicle advancements, market trends, and future outlook for this rapidly growing industry.
               </div>
 
               <div className="w-full pt-3 flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">
@@ -203,11 +200,12 @@ const Home_comp2 = () => {
               </div>
 
               <b className="w-[97%] pt-3 relative text-[1.5rem] capitalize inline-block font-inria-serif text-white text-left">
-                What is NFT?
+              The Evolution of Electric Vehicles: Trends and Future Prospects
               </b>
 
               <div className="w-[85%] pt-3 relative text-[1rem] capitalize font-inria-serif text-white text-left inline-block">
-                Lorem ipsum dolor sit amet consectetur. Sagittis urna s.
+              An overview of the advancements in electric vehicle technology, market trends, and the future outlook for this rapidly growing industry.
+
               </div>
 
               <div className="w-full pt-3 flex justify-end relative text-[1rem] capitalize font-inria-serif text-white text-left ">

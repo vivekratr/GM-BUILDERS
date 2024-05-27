@@ -6,10 +6,9 @@ import PluralitySocialConnect from "plurality-social-connect";
 
 
 const Profile = () => {
-  const { childRef,profileData,
+  const { childRef,profileData,isConnected, setIsConnected
   } = useContext(Context);
   const [activeButton, setActiveButton] = React.useState("Recommended For You");
-  const [isConnected, setIsConnected] = useState(false);
   const hiddenButtonWrapperRef = React.useRef(null);
 
 
