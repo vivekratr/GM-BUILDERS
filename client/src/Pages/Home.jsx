@@ -272,7 +272,14 @@ const Home = () => {
             {/* showing button */}
 
             <div
-              onClick={handleVisibleButtonClick}
+              onClick={()=>{
+                if (isConnected) {
+                  navigate('/profile')
+                }
+                else{
+                  handleVisibleButtonClick()
+                }
+                }}
               className="rounded-lg cursor-pointer w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]"
             >
               <img
