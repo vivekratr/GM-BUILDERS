@@ -33,6 +33,17 @@ const Home_comp6 = () => {
                 alt=""
               />
             </a>{" "}
+            
+          </div>
+          <div className="absolute left-[43rem] top-[8rem]">
+          <a target="_blank" href="https://blog.pinax.network/web3/substreams/">
+              <img
+                className=" cursor-pointer w-[106px] object-cover "
+                src="https://i.imgur.com/HpWNNB2.png"
+                alt=""
+              />
+            </a>
+
           </div>
         </div>
       </BackgroundImageDiv>
