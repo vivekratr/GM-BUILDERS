@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import BackgroundImageDiv from "../components/BGImageDiv";
 
 const Profile = () => {
-  const [activeButton, setActiveButton] = React.useState('Recommended For You');
+  const [activeButton, setActiveButton] = React.useState("Recommended For You");
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
