@@ -10,15 +10,17 @@ const Graph = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          'https://gateway-testnet-arbitrum.network.thegraph.com/api/291694aaac143f1f1504f18ac8709ea6/subgraphs/id/F1yJppu8nxfXM9TrTKqmofWVWBKL2ktnqWz2KzimjhaZ',
+          'https://api.studio.thegraph.com/query/75757/gmbuilders/version/latest',
           {
             query: `
-              {
-                entities {
+            {
+                userUpdateds(orderBy: name) {
+                  name
+                  interest
                   id
-                  attribute1
-                  attribute2
-                  # Add other attributes you need
+                  profileUrl
+                  userAddress
+                  username
                 }
               }
             `
