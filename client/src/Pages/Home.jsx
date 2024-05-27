@@ -193,7 +193,7 @@ const Home = () => {
               </li>
               <li
                 onClick={() => {
-                  navigate("/blogs");
+                  navigate("/blog");
                 }}
               >
                 <a
