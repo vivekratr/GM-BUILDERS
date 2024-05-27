@@ -127,15 +127,15 @@ const Home = () => {
    async function readUserExist() {
     
       
-      await PluralitySocialConnect.readFromContract(contractAddress,abi,"getUserProfile",[walletAddress])
-      await PluralitySocialConnect.getConnectedAccount()
+     await PluralitySocialConnect.getConnectedAccount() 
+     await PluralitySocialConnect.readFromContract(contractAddress,abi,"getUserProfile",[walletAddress])
       // await PluralitySocialConnect.readFromContract(contractAddress,abi,"isUserExist")
 
 
     }
   readUserExist()
     
-  }, [profileData])
+  }, [profileData,walletAddress])
 
   React.useEffect(() => {
 
