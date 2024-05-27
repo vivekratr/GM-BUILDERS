@@ -8,19 +8,22 @@ import BackgroundImageDiv from "../components/BGImageDiv";
 import { Context } from "../context/ContextProvider";
 
 const BlogSection = () => {
-  const { childRef,profileData,
+  const { handleProfileDataReturned,profileData,
+    setIsConnected,
+    isConnected,
+    childRef,
+    writeBlog,
 } = useContext(Context);
-  const [activeButton, setActiveButton] = useState(null);
-  const [isConnected, setIsConnected] = useState(false);
+  const [activeButton, setActiveButton] = useState('Recommended For You');
 
   const hiddenButtonWrapperRef = React.useRef(null);
 
-  const handleProfileDataReturned = (data ) => {
-    const receivedData = JSON.parse(JSON.stringify(data))
-    console.log("Get profile data:", receivedData);
-    alert(JSON.stringify(data));
-    childRef.current.closeSocialConnectPopup();
-  };
+  // const handleProfileDataReturned = (data ) => {
+  //   const receivedData = JSON.parse(JSON.stringify(data))
+  //   console.log("Get profile data:", receivedData);
+  //   alert(JSON.stringify(data));
+  //   childRef.current.closeSocialConnectPopup();
+  // };
 
   // Web3 function handles
   const handleGetAllAccounts = (data ) => {

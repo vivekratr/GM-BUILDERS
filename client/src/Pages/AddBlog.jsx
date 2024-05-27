@@ -27,6 +27,8 @@ const AddBlog = () => {
     isConnected,
     childRef,
     writeBlog,
+    allBlogs,
+    detailBlog,
   } = useContext(Context);
 
   const [title, setTitle] = useState("");

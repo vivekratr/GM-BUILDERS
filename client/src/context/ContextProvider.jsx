@@ -1,27 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { ethers, utils } from "ethers";
 import { contractABI, contractAddress } from "../utils/GMBUILDERS";
+import axios from "axios";
+
 
 export const Context = React.createContext();
 
-const { ethereum } = window;
 
-const getEthereumContract = () => {
-  
-  const provider = new ethers.providers.Web3Provider(ethereum);
-  const signer = provider.getSigner();
-  const socoinContract = new ethers.Contract(
-    contractAddress,
-    contractABI,
-    signer
-  );
-  console.log("ethereum", ethereum);
-  console.log(contractABI, contractAddress);
-  console.log("signer", signer);
-  console.log("provider", provider);
-  console.log("Contract", socoinContract);
-  return socoinContract;
-};
 // eslint-disable-next-line react/prop-types
 export const BlogProvider = ({ children }) => {
   const childRef = React.useRef(null);
@@ -32,6 +17,7 @@ export const BlogProvider = ({ children }) => {
   const [isConnected, setIsConnected] = useState(false);
   const [allBlogs, setAllBlogs] = useState(null)
   const [detailBlog, setDetailBlog] = useState(null)
+  const [recommendBlog, setRecommendBlog] = useState(null)
 
 
   const isUserEXIST = async () => {
@@ -165,6 +151,7 @@ export const BlogProvider = ({ children }) => {
 
   useEffect(() => {
     async function a() {
+     
      await processArray(allBlogs).then((result) => {
         console.log(result);
         setDetailBlog(result);
@@ -174,6 +161,26 @@ export const BlogProvider = ({ children }) => {
   
   
   }, [allBlogs])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.post('https://blogbot.onrender.com/recomm', {
+          intrests:profileData.assetData
+        });
+        console.log(response.data); 
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+
+    // Optionally, you can return a cleanup function if needed
+    return () => {
+      // Cleanup code here (if needed)
+    };
+  }, [profileData]);
   
   
 
@@ -297,6 +304,8 @@ export const BlogProvider = ({ children }) => {
         profileData,
         isUserExist,
         isConnected,
+        allBlogs,
+        detailBlog,
       }}
     >
       {children}
