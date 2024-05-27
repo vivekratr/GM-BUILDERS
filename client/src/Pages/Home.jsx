@@ -16,7 +16,7 @@ import { abi, contractAddress } from "../utils/GMBUILDERS";
 
 const Home = () => {
  
-  const { childRef,profileData,setProfileData,setDatas,setWalletAddress,walletAddress,
+  const { childRef,profileData,setProfileData,setDatas,setWalletAddress,walletAddress,isUserExist,setIsUserExist
   } = useContext(Context);
   const hiddenButtonWrapperRef = React.useRef(null);
   const [isConnected, setIsConnected] = useState(false);
