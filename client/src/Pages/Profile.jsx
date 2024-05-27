@@ -31,6 +31,11 @@ const Profile = () => {
             <img src="https://i.imgur.com/3b6hK3V.png" alt="" />
             <div className="w-[12.875rem] relative text-[1.125rem] font-inter text-[#757575] text-left inline-block">Joined September 2023</div>
         </div>
+
+        <div className="flex">
+        <div className="w-[2.063rem] relative text-[1.125rem] font-inter text-white text-left inline-block">700</div>
+        <div className="w-[9.063rem] relative text-[1.125rem] font-inter text-[#8C8C8C] text-left inline-block">Reputation score</div>
+        </div>
     </div>
 </div>
 </div>
