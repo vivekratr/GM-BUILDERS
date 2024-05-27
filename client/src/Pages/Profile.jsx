@@ -116,13 +116,23 @@ const Profile = () => {
           />
         </button>
       </div>
-      <div style={{ gridTemplateRows: `360px auto` }} className="grid py-0 w-[90%] mx-auto grid-cols-12 pt-[63px] gap-[45px]">
+      <div style={{ gridTemplateRows: `460px auto` }} className="grid py-0 w-[90%] mx-auto grid-cols-12 pt-[63px] gap-[45px]">
          {/* 1st col */}
          <div className="col-span-7 relative">
           <BackgroundImageDiv
             classs={""}
             imageUrl="https://i.imgur.com/p1CFttI.png"
           >
+            <div className="flex absolute w-full flex-col gap-7 items-end justify-center p-4 h-min">
+            <div className="w-[98px] relative rounded-2xl bg-[#FFFFFFBD] box-border h-[1.625rem] overflow-hidden text-left text-[0.875rem] text-[#2D2D2D] font-inter border-[0.5px] border-solid border-white">
+<div className="flex items-center justify-center capitalize font-semibold">30 views</div>
+</div>
+<div className="w-[98px] flex  items-center justify-center relative rounded-2xl bg-[#FFFFFFBD] box-border h-[1.625rem] overflow-hidden text-left text-[0.875rem] text-[#2D2D2D] font-inter border-[0.5px] border-solid border-white">
+<div className="flex items-center justify-center capitalize font-semibold">Copy</div>
+<img className=" w-[24px] object-cover " src="https://i.imgur.com/CqSp4u9.png" alt="" />
+</div>
+
+            </div>
             <div className="flex flex-col  items-start justify-end h-full p-3">
               <div className="w-[80px] relative rounded-[47px] bg-[#FFFFFF00] box-border h-[1.438rem] text-left text-[1rem] text-white font-inter border-[0.5px] border-solid border-white">
                 <div className="flex items-center justify-center capitalize font-medium">
