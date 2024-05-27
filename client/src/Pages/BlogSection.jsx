@@ -1,15 +1,81 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, {useState, useState } from "react";
 import Navbar from "../components/Navbar";
 import "./css/BlogSection.css";
 import BackgroundImageDiv from "../components/BGImageDiv";
 import { Context } from "../context/ContextProvider";
 
 const BlogSection = () => {
+  const { childRef,
+} = useContext(Context);
   const [activeButton, setActiveButton] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
   const hiddenButtonWrapperRef = React.useRef(null);
+
+  const handleProfileDataReturned = (data ) => {
+    const receivedData = JSON.parse(JSON.stringify(data))
+    console.log("Get profile data:", receivedData);
+    alert(JSON.stringify(data));
+    childRef.current.closeSocialConnectPopup();
+  };
+
+  // Web3 function handles
+  const handleGetAllAccounts = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get all accounts:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetConnectedAccount = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get connected account:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleMessageSignature = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get message signature:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleVerifyMessageSignature = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Verify message signature:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetBalance = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get balance:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleSendTransaction = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Send transaction:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetBlockNumber = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get block number:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetTransactionCount = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get transaction count:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleReadFromContract = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Read from contract:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleWriteToContract = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Write to contract:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleErrorMessage = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get error message:", receivedData);
+      alert(JSON.stringify(data));
+  };
 
   // Function to handle the click on the visible button
   const handleVisibleButtonClick = () => {
