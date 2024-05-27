@@ -182,7 +182,7 @@ export const BlogProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const response = await axios.post('https://blogbot.onrender.com/recomm', {
-          intrests:["blockchain", "AI"]
+          intrests:["blockchain", "AI","stock"]
         });
         console.log(response.data); 
         await processArray1(response.data).then((result) => {

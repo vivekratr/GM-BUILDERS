@@ -2,8 +2,22 @@ import React, { useState, useContext } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
 import BackgroundImageDiv from "../components/BGImageDiv";
+import { useLocation } from 'react-router-dom';
+
 
 const ViewBlog = () => {
+  const location = useLocation();
+  let data;
+  let blog;
+
+  React.useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+     data = searchParams.get('data');
+     blog = searchParams.get('blog');
+  
+   
+  }, [])
+  
   const {
     handleProfileDataReturned,
     handleGetAllAccounts,
