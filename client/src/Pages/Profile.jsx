@@ -114,6 +114,9 @@ const Profile = () => {
           />
         </button>
       </div>
+      <div className="grid w-[80%] mx-auto grid-cols-12 ">
+
+      </div>
     </div>
   );
 };
