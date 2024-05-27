@@ -191,7 +191,9 @@ const Home = () => {
                   Home
                 </a>
               </li>
-              <li>
+              <li onClick={()=>{
+                navigate('/blogs')
+              }}>
                 <a
                   href="#"
                   className="text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block"
