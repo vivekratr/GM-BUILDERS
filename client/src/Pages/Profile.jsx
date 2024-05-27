@@ -62,7 +62,7 @@ const Profile = () => {
 
             <div className="w-[270px] flex flex-col items-center p-4 justify-normal relative rounded-2xl [background:linear-gradient(180.13deg,_#202020,_#000)] box-border h-[15.95rem] overflow-hidden text-left text-[1rem] text-[#777] font-inter border-t-[2px] border-solid border-[#282828] border-r-[1px] border-l-[1px]">
             <div className="w-[7.125rem] relative text-[1rem] capitalize font-medium font-inter mb-[22px] text-[#777777] text-left inline-block">Your GM Coins</div>
-            <img className=" mb-[22px] object-contain" src="" alt="" />
+            <img className=" mb-[32px] w-[95px] object-contain" src="https://i.imgur.com/g7sG0sW.png" alt="" />
             <div className="w-[104px] relative rounded-md [background:linear-gradient(106.75deg,_#fdd835,_#fff_49.15%,_#ffd000)] h-[1.938rem] overflow-hidden text-left text-[0.875rem] text-black font-inter">
 <div className="h-full flex items-center justify-center font-medium">10 coins</div>
 </div>
