@@ -18,7 +18,7 @@ const Profile = () => {
               />
             </div>
             <div className="col-span-7 flex flex-col gap-4">
-              <div className="flex">
+              <div className="flex gap-4">
                 <div className="flex flex-col">
                   <b className="w-[10.75rem] relative text-[1.625rem] inline-block font-inter text-white text-left">
                     Aditya Kumar
@@ -28,7 +28,7 @@ const Profile = () => {
                   </div>
                 </div>
                 <div className="w-[125px] relative rounded-[40px] bg-gray box-border h-[2.563rem] overflow-hidden text-left text-[1rem] text-white font-inter border-[1px] border-solid border-darkslategray">
-                  <div className="absolute top-[0.688rem] left-[1.313rem] font-medium">
+                  <div className="flex h-full items-center justify-center font-medium">
                     Edit Profile
                   </div>
                 </div>
@@ -38,14 +38,14 @@ const Profile = () => {
                 I like blogging
               </div>
 
-              <div className="flex gap-[6px] items-center justify-center">
+              <div className="flex gap-[6px] items-center justify-start">
                 <img src="https://i.imgur.com/3b6hK3V.png" alt="" />
                 <div className="w-[12.875rem] relative text-[1.125rem] font-inter text-[#757575] text-left inline-block">
                   Joined September 2023
                 </div>
               </div>
 
-              <div className="flex gap-[6px] items-center justify-center">
+              <div className="flex gap-[6px] items-center justify-start">
                 <div className="w-[2.063rem] relative text-[1.125rem] font-inter text-white text-left inline-block">
                   700
                 </div>
