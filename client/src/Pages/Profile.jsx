@@ -27,6 +27,10 @@ const Profile = () => {
     <div className="w-[5.75rem] relative text-[1.125rem] font-inter text-white text-left inline-block">{` Developer `}</div>
     <div className="w-[7.375rem] relative text-[1.125rem] font-inter text-white text-left inline-block">I like blogging</div>
         
+        <div className="flex gap-[6px] items-center justify-center">
+            <img src="https://i.imgur.com/3b6hK3V.png" alt="" />
+            <div className="w-[12.875rem] relative text-[1.125rem] font-inter text-[#757575] text-left inline-block">Joined September 2023</div>
+        </div>
     </div>
 </div>
 </div>
