@@ -6,7 +6,7 @@ import PluralitySocialConnect from "plurality-social-connect";
 import axios from "axios";
 
 const Profile = () => {
-  const { childRef, profileData, isConnected, setIsConnected } =
+  const { childRef, profileData, isConnected, setIsConnected,walletAddress } =
     useContext(Context);
   const [activeButton, setActiveButton] = React.useState("Recommended For You");
   const hiddenButtonWrapperRef = React.useRef(null);
@@ -15,7 +15,7 @@ const Profile = () => {
   const handleProfileDataReturned = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get profile data:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
     childRef.current.closeSocialConnectPopup();
   };
 
@@ -23,57 +23,57 @@ const Profile = () => {
   const handleGetAllAccounts = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get all accounts:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetConnectedAccount = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get connected account:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleMessageSignature = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get message signature:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleVerifyMessageSignature = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Verify message signature:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetBalance = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get balance:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleSendTransaction = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Send transaction:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetBlockNumber = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get block number:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetTransactionCount = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get transaction count:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleReadFromContract = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Read from contract:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleWriteToContract = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Write to contract:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleErrorMessage = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get error message:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
 
   // Function to handle the click on the visible button
@@ -101,7 +101,7 @@ React.useEffect(() => {
         {
           query: `
           {
-            userUpdateds(where: {userAddress: "0xD3Ee2A4E3B9425F45D3247Bb8D8dA7b930830b75"}) {
+            userUpdateds(where: {userAddress: ${walletAddress}}) {
               interest
               name
               profileUrl
@@ -112,7 +112,7 @@ React.useEffect(() => {
           `,
         }
       );
-      console.log("gotti" ,response.data)
+      console.log("gotti" ,response.data.userUpdateds)
       setUserData(response.data);
     } catch (error) {
       // setError(error);

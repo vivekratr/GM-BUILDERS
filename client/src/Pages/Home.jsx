@@ -280,7 +280,7 @@ const Home = () => {
                   handleVisibleButtonClick()
                 }
                 }}
-              className="rounded-lg cursor-pointer w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]"
+              className="rounded-lg cursor-pointer hover:scale-110 transition-all duration-150 w-full flex items-center justify-evenly relative box-border h-[3.25rem] overflow-hidden text-left text-[1.125rem] text-white font-inter border-[0.5px] border-solid border-[#FFFFFF4D]"
             >
               <img
                 className={`flex items-center justify-center  object-cover ${
