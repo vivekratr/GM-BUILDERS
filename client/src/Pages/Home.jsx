@@ -1,5 +1,5 @@
-// import React from 'react'
-import Navbar from "../components/Navbar";
+import React, {useState,useContext } from "react";
+// import Navbar from "../components/Navbar";
 import Home_comp1 from "../components/Home_comp1";
 import Home_comp2 from "../components/Home_comp2";
 import Home_comp3 from "../components/Home_comp3";
@@ -7,10 +7,92 @@ import Home_comp4 from "../components/Home_comp4";
 import Home_comp5 from "../components/Home_comp5";
 import Home_comp6 from "../components/Home_comp6";
 import Footer from "../components/Footer";
-import React from "react";
+// import React from "react";
 import PluralitySocialConnect from 'plurality-social-connect';
+import { Context } from "../context/ContextProvider";
+
 
 const Home = () => {
+  const { childRef,profileData,
+  } = useContext(Context);
+  const hiddenButtonWrapperRef = React.useRef(null);
+  const [isConnected, setIsConnected] = useState(false);
+
+
+  const handleProfileDataReturned = (data ) => {
+    const receivedData = JSON.parse(JSON.stringify(data))
+    console.log("Get profile data:", receivedData);
+    alert(JSON.stringify(data));
+    childRef.current.closeSocialConnectPopup();
+  };
+
+  // Web3 function handles
+  const handleGetAllAccounts = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get all accounts:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetConnectedAccount = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get connected account:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleMessageSignature = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get message signature:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleVerifyMessageSignature = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Verify message signature:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetBalance = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get balance:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleSendTransaction = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Send transaction:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetBlockNumber = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get block number:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleGetTransactionCount = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get transaction count:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleReadFromContract = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Read from contract:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleWriteToContract = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Write to contract:", receivedData);
+      alert(JSON.stringify(data));
+  };
+  const handleErrorMessage = (data ) => {
+      const receivedData = JSON.parse(JSON.stringify(data))
+      console.log("Get error message:", receivedData);
+      alert(JSON.stringify(data));
+  };
+
+  // Function to handle the click on the visible button
+  const handleVisibleButtonClick = () => {
+    if (hiddenButtonWrapperRef.current) {
+      const hiddenButton =
+        hiddenButtonWrapperRef.current.querySelector("button");
+      if (hiddenButton) {
+        hiddenButton.click();
+      }
+    }
+  };
 
   React.useEffect(() => {
 

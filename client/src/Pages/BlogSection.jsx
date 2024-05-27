@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, {useState,useContext } from "react";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 import PluralitySocialConnect from "plurality-social-connect";
 
 import "./css/BlogSection.css";
