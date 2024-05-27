@@ -29,6 +29,8 @@ export const BlogProvider = ({ children }) => {
   const [walletAddress, setWalletAddress] = useState('')
   const [profileData, setProfileData] = useState(null);
   const [isUserExist, setIsUserExist] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
+
 
   const isUserEXIST = async () => {
     if (typeof window.ethereum !== 'undefined') {
@@ -50,6 +52,7 @@ export const BlogProvider = ({ children }) => {
         // Call the isUserExist function
         const userExists = await contract.isUserExist();
         console.log("User exists:", userExists);
+        setIsUserExist(userExists)
   
       } catch (error) {
         console.error("Error reading from contract:", error);
@@ -97,57 +100,57 @@ export const BlogProvider = ({ children }) => {
   const handleGetAllAccounts = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get all accounts:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetConnectedAccount = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get connected account:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleMessageSignature = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get message signature:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleVerifyMessageSignature = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Verify message signature:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetBalance = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get balance:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleSendTransaction = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Send transaction:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetBlockNumber = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get block number:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleGetTransactionCount = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get transaction count:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleReadFromContract = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Read from contract:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleWriteToContract = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Write to contract:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   const handleErrorMessage = (data) => {
     const receivedData = JSON.parse(JSON.stringify(data));
     console.log("Get error message:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
 
   const renderData = (data) => {
@@ -178,11 +181,13 @@ export const BlogProvider = ({ children }) => {
         setProfileData,
         setWalletAddress,
         setIsUserExist,
+        setIsConnected,
         childRef,
         walletAddress,
         datas,
         profileData,
         isUserExist,
+        isConnected,
       }}
     >
       {children}

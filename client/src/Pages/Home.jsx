@@ -11,15 +11,16 @@ import Footer from "../components/Footer";
 import PluralitySocialConnect from 'plurality-social-connect';
 import { Context } from "../context/ContextProvider";
 import { abi, contractAddress } from "../utils/GMBUILDERS";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Home = () => {
+  const navigate = useNavigate();
  
-  const { childRef,profileData,setProfileData,setDatas,setWalletAddress,walletAddress,isUserExist,setIsUserExist,datas
+  const { childRef,profileData,setProfileData,setDatas,setWalletAddress,walletAddress,isUserExist,setIsUserExist,datas,setIsConnected,isConnected,
   } = useContext(Context);
   const hiddenButtonWrapperRef = React.useRef(null);
-  const [isConnected, setIsConnected] = useState(false);
 
 
   const handleProfileDataReturned = (data) => {
@@ -65,32 +66,32 @@ const Home = () => {
   const handleMessageSignature = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get message signature:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleVerifyMessageSignature = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Verify message signature:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetBalance = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get balance:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleSendTransaction = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Send transaction:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetBlockNumber = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get block number:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetTransactionCount = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get transaction count:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleReadFromContract = (data ) => {
     console.log(data)
@@ -103,12 +104,12 @@ const Home = () => {
   const handleWriteToContract = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Write to contract:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleErrorMessage = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get error message:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
 
   // Function to handle the click on the visible button
@@ -202,7 +203,9 @@ const Home = () => {
               Communities
             </a>
           </li>
-          <li>
+          <li onClick={()=>{
+            navigate('/addblog')
+          }}>
             <a
               href="#"
               className="text-[1.125rem] capitalize font-medium font-inter text-white text-left inline-block"

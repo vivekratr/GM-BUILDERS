@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import PluralitySocialConnect from "plurality-social-connect";
 import { Context } from "../context/ContextProvider";
+import axios from "axios";
 
 const AddBlog = () => {
   const {
@@ -17,10 +18,11 @@ const AddBlog = () => {
     // handleWriteToContract,
     // handleErrorMessage,
     profileData,
+    setIsConnected,
+    isConnected,
     childRef,
   } = useContext(Context);
 
-  const [isConnected, setIsConnected] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [tags, setTags] = useState("");
@@ -30,11 +32,47 @@ const AddBlog = () => {
   const fileInputRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const NFT_STORAGE_TOKEN =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDRCOWM5Q0UwQmE3NENiRjA4QkJlZjIwNDMzZEUwYjczNzUxNjI4RTgiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5ODUwNDQ1NzM3MywibmFtZSI6IkZ1bmRFVEgifQ.JxTH4iRtScscfmb9mvZqhSqF9MKs2b0JJS2yof7hzF4";
+
+
+    const handleUpload = async () => {
+      if (!image) {
+        console.error("No file selected.");
+        return;
+      }
+      console.log("spin activated");
+  
+      const formData = new FormData();
+      formData.append("file", image);
+      console.log("file", formData);
+  
+      try {
+        const response = await axios.post(
+          "https://api.nft.storage/upload",
+          formData,
+          {
+            headers: {
+              Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDRCOWM5Q0UwQmE3NENiRjA4QkJlZjIwNDMzZEUwYjczNzUxNjI4RTgiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5ODUwNDQ1NzM3MywibmFtZSI6IkZ1bmRFVEgifQ.JxTH4iRtScscfmb9mvZqhSqF9MKs2b0JJS2yof7hzF4`,
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+  
+        setCid(response.data.value.cid);
+  
+        console.log("NFT Storage response:", response.data.value.cid);
+        return response.data.value.cid;
+      } catch (error) {
+        console.error("Error uploading to NFT Storage:", error);
+      }
+    };
+
   // web3 functions
   const handleProfileDataReturned = (data ) => {
     const receivedData = JSON.parse(JSON.stringify(data))
     console.log("Get profile data:", receivedData);
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
     childRef.current.closeSocialConnectPopup();
   };
 
@@ -42,57 +80,57 @@ const AddBlog = () => {
   const handleGetAllAccounts = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get all accounts:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetConnectedAccount = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get connected account:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleMessageSignature = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get message signature:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleVerifyMessageSignature = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Verify message signature:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetBalance = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get balance:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleSendTransaction = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Send transaction:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetBlockNumber = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get block number:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleGetTransactionCount = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get transaction count:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleReadFromContract = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Read from contract:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleWriteToContract = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Write to contract:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
   const handleErrorMessage = (data ) => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Get error message:", receivedData);
-      alert(JSON.stringify(data));
+      // alert(JSON.stringify(data));
   };
 
   const handleVisibleButtonClick = () => {
@@ -188,7 +226,7 @@ const AddBlog = () => {
       {/* Main */}
       <div className="w-[80%] pt-7 pl-[77px] pb-10 pr-[49px] mx-auto flex flex-col items-start justify-start relative rounded-[20px] bg-[#111] box-border overflow-hidden text-left text-[1.375rem] text-[#7a7a7a] font-inria-serif border-[1px] border-solid border-[#282828]">
         {/* AI */}
-        <div className="w-full relative flex items-center justify-end">
+        <div  className="cursor-pointer w-full relative flex items-center justify-end">
           <div className="w-[121px] relative rounded-[5px] box-border h-[2.813rem] overflow-hidden text-center text-[1rem] text-white font-inria-serif border-[1px] border-solid border-[#545454]">
             <div className="flex items-center justify-center w-full h-full capitalize">
               AI assistant
