@@ -117,7 +117,7 @@ const Profile = () => {
       </div>
       <div className="grid w-[80%] mx-auto grid-cols-12 ">
          {/* 1st col */}
-         <div className="col-span-6 relative">
+         <div className="col-span-7 relative">
           <BackgroundImageDiv
             classs={"border-[1px] border-solid border-[#3b3b3b]"}
             imageUrl="https://i.imgur.com/p1CFttI.png"
@@ -145,7 +145,7 @@ const Profile = () => {
           </BackgroundImageDiv>
         </div>
          {/* 2nd col */}
-         <div className="col-span-6 relative">
+         <div className="col-span-5 relative">
           <BackgroundImageDiv
             classs={"border-[1px] border-solid border-[#3b3b3b]"}
             imageUrl="https://i.imgur.com/p1CFttI.png"
