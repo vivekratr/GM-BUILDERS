@@ -97,7 +97,7 @@ const Home = () => {
       const receivedData = JSON.parse(JSON.stringify(data))
       console.log("Read from contract:", receivedData);
       setIsUserExist(receivedData.data)
-      // alert(JSON.stringify(data));
+      alert(JSON.stringify(data));
       return receivedData;
   };
   const handleWriteToContract = (data ) => {
@@ -127,8 +127,10 @@ const Home = () => {
    async function readUserExist() {
     
       
-      await PluralitySocialConnect.readFromContract(contractAddress,abi,"isUserExist")
+      await PluralitySocialConnect.readFromContract(contractAddress,abi,"getUserProfile",[walletAddress])
       await PluralitySocialConnect.getConnectedAccount()
+      // await PluralitySocialConnect.readFromContract(contractAddress,abi,"isUserExist")
+
 
     }
   readUserExist()
@@ -138,11 +140,11 @@ const Home = () => {
   React.useEffect(() => {
 
     async function readUserExist() {
-     console.log("aagaya" ,isUserExist)
+    //  console.log("aagaya" ,isUserExist)
        
      if (!isUserExist) {
        if (profileData && datas) {
-         console.log("bhai write ho raha",`${profileData.displayName},${profileData.name},${datas.assetData},${profileData.profileUrl}`)
+        //  console.log("bhai write ho raha",`${profileData.displayName},${profileData.name},${datas.assetData},${profileData.profileUrl}`)
          await PluralitySocialConnect.writeToContract(contractAddress,abi, "setUser",  [profileData.displayName, profileData.name, datas.assetData, profileData.profileUrl])
         }
         

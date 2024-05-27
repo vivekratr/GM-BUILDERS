@@ -7,6 +7,7 @@ export const Context = React.createContext();
 const { ethereum } = window;
 
 const getEthereumContract = () => {
+  
   const provider = new ethers.providers.Web3Provider(ethereum);
   const signer = provider.getSigner();
   const socoinContract = new ethers.Contract(
@@ -28,6 +29,42 @@ export const BlogProvider = ({ children }) => {
   const [walletAddress, setWalletAddress] = useState('')
   const [profileData, setProfileData] = useState(null);
   const [isUserExist, setIsUserExist] = useState(false);
+
+  const isUserEXIST = async () => {
+    if (typeof window.ethereum !== 'undefined') {
+      try {
+        // Request account access if needed
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+  
+        // Connect to the Ethereum network
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        
+        // Log the connected account address
+        const account = await signer.getAddress();
+        console.log("Account address:", account);
+  
+        // Instantiate the contract
+        const contract = new ethers.Contract(contractAddress, contractABI, signer);
+  
+        // Call the isUserExist function
+        const userExists = await contract.isUserExist();
+        console.log("User exists:", userExists);
+  
+      } catch (error) {
+        console.error("Error reading from contract:", error);
+      }
+    } else {
+      console.log('MetaMask is not installed');
+    }
+  };
+
+  useEffect(() => {
+    
+  isUserEXIST()
+    
+  }, [datas])
+  
 
   const handleProfileDataReturned = (data) => {
     try {
