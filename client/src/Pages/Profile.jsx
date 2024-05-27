@@ -76,6 +76,9 @@ const Profile = () => {
           </div>
         </div>
       </div>
+
+      {/* user's article */}
+      
     </div>
   );
 };
