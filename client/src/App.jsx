@@ -7,6 +7,7 @@ import BlogSection from "./Pages/BlogSection";
 import ViewBlog from "./Pages/ViewBlog";
 import AddBlog from "./Pages/AddBlog";
 import Graph from "./components/Graph";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/blog" element={<BlogSection /*state = {state}*/ />} />
             <Route path="/addblog" element={<AddBlog /*state = {state}*/ />} />
             <Route path="/graph" element={<Graph /*state = {state}*/ />} />
+            <Route path="/profile" element={<Profile /*state = {state}*/ />} />
             <Route
               path="/blogview"
               element={<ViewBlog /*state = {state}*/ />}
