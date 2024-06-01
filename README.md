@@ -1,6 +1,7 @@
 GM Builders
 GM Builders is a decentralized application (dApp) that provides a platform for social blogging and news article publishing. It is designed for technology enthusiasts to access curated content, stay updated on Web3 developments, and share their insights. This project leverages blockchain technology, Plurality, Chainlink, The Graph, and Pinax to ensure personalized user experiences, data transparency, and security.
 
+
 Technologies Used
 Solidity: Smart contract development on Ethereum.
 Hardhat: Ethereum development environment.
